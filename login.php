@@ -62,7 +62,7 @@
                                           				if ($_GET){
                                           					if ($_GET["error"] == "si"){?>
                                           						<td colspan="2" align="center" bgcolor=red>
-                                          						<span style="color:#f76a6a"><b>Datos incorrectos y Prueba Correcta</b></span>
+                                          						<span style="color:#f76a6a"><b>Datos incorrectos</b></span>
                                           				<?php }}else{?>
                                           					<td colspan="2" align="center" bgcolor=#cccccc>Introduce tu clave de acceso
                                           				<?php } ?>
