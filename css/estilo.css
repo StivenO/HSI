@@ -66,7 +66,7 @@ body {
   line-height: 1.5;
   color: #B7B6B6;
   text-align: left;
-  background: linear-gradient(to bottom, #00D0FD, white);
+  background: linear-gradient(to bottom, #00D0FD, black);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
