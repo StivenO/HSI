@@ -54,13 +54,13 @@
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword2" placeholder="Confirmar Contraseña">
                                         </div>
-                                        <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                        <a href="login.php" class="btn btn-primary btn-user btn-block">
                                             <b>Restablecer Contraseña</b>
                                         </a>
                                     </form>
                                     <br>
                                     <div class="text-center">
-                                        <a class="small" href="login.html">Volver a Inicio de Sesión</a>
+                                        <a class="small" href="login.php">Volver a Inicio de Sesión</a>
                                     </div><hr>
                                     <footer class="text-center">
                                         <p>&copy; 2021 <a> Hardware Store Inventory </a></p>

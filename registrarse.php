@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/estilo.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
 
 </head>
 
@@ -61,23 +61,23 @@
                                             id="exampleRepeatPassword" placeholder="Repetir Contraseña">
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <a href="login.php" class="btn btn-primary btn-user btn-block">
                                     Registrar Cuenta
                                 </a>
                                 <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                <a href="index.php" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Registrarse con Google
                                 </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                <a href="index.php" class="btn btn-facebook btn-user btn-block">
                                     <i class="fab fa-facebook-f fa-fw"></i> Registrarse con Facebook
                                 </a>
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="recuperar_clave.html">¿Has olvidado tu contraseña?</a>
+                                <a class="small" href="recuperar_clave.php">¿Has olvidado tu contraseña?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.html">¿Ya tienes una Cuenta? Ingresa!</a>
+                                <a class="small" href="login.php">¿Ya tienes una Cuenta? Ingresa!</a>
                             </div>
                         </div>
                     </div>

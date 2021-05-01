@@ -14,7 +14,7 @@
       $_SESSION["autentificado"]= "si";
       $_SESSION["nomuser"] = $data['nomuser'];
       $_SESSION["nick"] = $data['nick'];
-      header ("Location: index.html");
+      header ("Location: index.php");
       }else {
         header("Location: login.php?error=si");
       }

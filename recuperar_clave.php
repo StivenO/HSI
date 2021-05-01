@@ -51,13 +51,13 @@
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Ingrese su Correo Electrónico...">
                                         </div>
-                                        <a href="recuperar_clave2.html" class="btn btn-primary btn-user btn-block">
+                                        <a href="recuperar_clave2.php" class="btn btn-primary btn-user btn-block">
                                             <b>Enviar Contraseña</b>
                                         </a>
                                     </form>
                                     <br>
                                     <div class="text-center">
-                                        <a class="small" href="login.html">¿Ya tienes una cuenta? Ingresa!</a>
+                                        <a class="small" href="login.php">¿Ya tienes una cuenta? Ingresa!</a>
                                     </div><hr>
                                     <footer class="text-center">
                                         <p>&copy; 2021 <a> Hardware Store Inventory </a></p>

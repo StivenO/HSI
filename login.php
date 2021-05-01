@@ -73,7 +73,7 @@
 
                                     </form>
                                     <div class="text-center">
-                                        <a class="small" href="recuperar_clave.html">¿Has olvidado tu Contraseña?</a>
+                                        <a class="small" href="recuperar_clave.php">¿Has olvidado tu Contraseña?</a>
                                     </div>
                                     <footer class="text-center">
                                         <hr>
