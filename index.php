@@ -7,31 +7,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Dashboard de la Aplicación Web Hardware Store Inventory">
+    <meta name="description" content="Página principal de la Aplicación Web Hardware Store Inventory">
     <meta name="author" content="Hardware Store Inventory">
 
     <title>HSI - Aplicación</title>
 
-    <!-- Custom fonts for this template-->
+    <!-- Fuentes personalizadas para esta plantilla-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Estilos personalizados para esta plantilla-->
     <link href="css/estilo.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
+    <!-- Envoltorio de página -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
+        <!-- barra lateral -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
+            <!-- Barra lateral: marca -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-hammer"></i>
@@ -39,25 +39,25 @@
                 <div class="sidebar-brand-text mx-3">HSI (APP)<sup>1.0</sup></div>
             </a>
 
-            <!-- Divider -->
+            <!-- Divisor -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
+            <!-- Elemento de navegación: panel -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Gestión General</span></a>
             </li>
 
-            <!-- Divider -->
+            <!-- Divisor -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
+            <!-- Encavezado -->
             <div class="sidebar-heading">
                 Interfaz
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- NElemento de navegación: menú contraer páginas -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -73,7 +73,7 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Elemento de navegación: menú desplegable de utilidades -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
@@ -92,15 +92,15 @@
                 </div>
             </li>
 
-            <!-- Divider -->
+            <!-- Divisor -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
+            <!-- Encabezado -->
             <div class="sidebar-heading">
                 Complementos
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Elemento de navegación: menú contraer páginas -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -121,29 +121,29 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
+            <!-- Elemento de navegación: gráficos -->
             <li class="nav-item">
                 <a class="nav-link" href="charts.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Gráficas</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Elemento de navegación: tablas -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tablas</span></a>
             </li>
 
-            <!-- Divider -->
+            <!-- Divisor -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
+            <!-- Alternar barra lateral (barra lateral) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
+            <!-- Mensaje de la barra lateral -->
             <div class="sidebar-card">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
                 <p class="text-center mb-2"><strong>Hardware Store Inventory</strong> esta feliz que haga uso de su software, estamos para usted!</p>
@@ -151,27 +151,27 @@
             </div>
 
         </ul>
-        <!-- End of Sidebar -->
+        <!-- Fin de la barra lateral -->
 
-        <!-- Content Wrapper -->
+        <!-- Envoltorio de contenido -->
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Main Content -->
+            <!-- Contenido principal -->
             <div id="content">
 
-                <!-- Topbar -->
+                <!-- Barra superior -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <!-- Sidebar Toggle (Topbar) -->
+                    <!-- Alternar barra lateral (barra superior) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
+                    <!-- Búsqueda de la barra superior -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar por..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
@@ -181,16 +181,16 @@
                         </div>
                     </form>
 
-                    <!-- Topbar Navbar -->
+                    <!-- Barra superior de navegación -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <!-- Elemento de navegación: menú desplegable de búsqueda (solo visible XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                            <!-- Dropdown - Messages -->
+                            <!-- Menú desplegable - Mensajes -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
@@ -208,15 +208,15 @@
                             </div>
                         </li>
 
-                        <!-- Nav Item - Alerts -->
+                        <!-- Elemento de navegación: alertas -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts / Para Notificaciones-->
+                                <!-- Contador - Alertas / Para Notificaciones-->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
-                            <!-- Dropdown - Alerts -->
+                            <!-- Menú desplegable - Alertas -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
@@ -259,15 +259,15 @@
                             </div>
                         </li>
 
-                        <!-- Nav Item - Messages -->
+                        <!-- Elemento de navegación - Mensajes -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
+                                <!-- Contador - Mensajes -->
                                 <span class="badge badge-danger badge-counter">7</span>
                             </a>
-                            <!-- Dropdown - Messages -->
+                            <!-- Menú desplegable - Mensajes -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
@@ -327,7 +327,7 @@
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
+                        <!-- Elemento de navegación: información del usuario -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -335,7 +335,7 @@
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
-                            <!-- Dropdown - User Information -->
+                            <!-- Menú desplegable - Información del usuario -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
@@ -361,22 +361,22 @@
                     </ul>
 
                 </nav>
-                <!-- End of Topbar -->
+                <!-- Fin de la barra superior -->
 
-                <!-- Begin Page Content -->
+                <!-- Contenido de la página de inicio -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
+                    <!-- Encabezado de página -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Página Principal</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generar Reportes</a>
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- Fila de contenido -->
                     <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Ejemplo de tarjeta de ganancias (mensuales) -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
@@ -394,7 +394,7 @@
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Ejemplo de tarjeta de ganancias (mensuales) -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
@@ -412,7 +412,7 @@
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Ejemplo de tarjeta de ganancias (mensuales) -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
@@ -441,7 +441,7 @@
                             </div>
                         </div>
 
-                        <!-- Pending Requests Card Example -->
+                        <!-- Ejemplo de tarjeta de solicitudes pendientes -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
@@ -460,14 +460,14 @@
                         </div>
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- Fila de contenido -->
 
                     <div class="row">
 
-                        <!-- Area Chart -->
+                        <!-- Gráfico de área -->
                         <div class="col-xl-8 col-lg-7">
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
+                                <!-- Encabezado de la tarjeta: menú desplegable -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Resumen de Ganancias</h6>
@@ -486,7 +486,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Card Body -->
+                                <!-- Cuerpo de la tarjeta -->
                                 <div class="card-body">
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
@@ -495,10 +495,10 @@
                             </div>
                         </div>
 
-                        <!-- Pie Chart -->
+                        <!-- Gráfico circular -->
                         <div class="col-xl-4 col-lg-5">
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
+                                <!-- Encabezado de la tarjeta: menú desplegable -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Fuentes de Ingresos</h6>
@@ -517,7 +517,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Card Body -->
+                                <!-- Gráfico circular -->
                                 <div class="card-body">
                                     <div class="chart-pie pt-4 pb-2">
                                         <canvas id="myPieChart"></canvas>
@@ -538,13 +538,13 @@
                         </div>
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- Fila de contenido -->
                     <div class="row">
 
-                        <!-- Content Column -->
+                        <!-- Fila de columna -->
                         <div class="col-lg-6 mb-4">
 
-                            <!-- Project Card Example -->
+                            <!-- Ejemplo de tarjeta de proyecto -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Proyectos</h6>
@@ -583,7 +583,7 @@
                                 </div>
                             </div>
 
-                            <!-- Color System -->
+                            <!-- Sistema de color -->
                             <div class="row">
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-primary text-white shadow">
@@ -655,7 +655,7 @@
 
                         <div class="col-lg-6 mb-4">
 
-                            <!-- Illustrations -->
+                            <!-- Ilustraciones -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Ilustraciones</h6>
@@ -674,7 +674,7 @@
                                 </div>
                             </div>
 
-                            <!-- Approach -->
+                            <!-- Acercarse -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Enfoque de desarrollo</h6>
@@ -692,12 +692,12 @@
                     </div>
 
                 </div>
-                <!-- /.container-fluid -->
+                <!-- /.container-fluid que está width: 100%en todos los puntos de interrupción -->
 
             </div>
-            <!-- End of Main Content -->
+            <!-- Fin del contenido principal -->
 
-            <!-- Footer -->
+            <!-- Pie de página -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -705,20 +705,20 @@
                     </div>
                 </div>
             </footer>
-            <!-- End of Footer -->
+            <!-- Fin del pie de página -->
 
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- Contenedor de fin de contenido-->
 
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- Contenedor de fin de página -->
 
-    <!-- Scroll to Top Button-->
+    <!-- Desplazarse hasta el botón superior-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Modal de cierre de sesión-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -745,13 +745,13 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
+    <!-- Custom scripts para todas las páginas -->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
+    <!-- Complementos de nivel de página -->
     <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
+    <!-- Scripts,Nivel de página personalizado -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
