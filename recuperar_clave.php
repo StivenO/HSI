@@ -51,9 +51,7 @@
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Ingrese su Correo Electrónico...">
                                         </div>
-                                        <a href="recuperar_clave2.php" class="btn btn-primary btn-user btn-block">
-                                            <b>Enviar Contraseña</b>
-                                        </a>
+                                        <a href="recuperar_clave2.php" class="btn btn-primary btn-user btn-block">Enviar Contraseña</a>
                                     </form>
                                     <br>
                                     <div class="text-center">

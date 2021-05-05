@@ -54,9 +54,7 @@
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword2" placeholder="Confirmar Contraseña">
                                         </div>
-                                        <a href="login.php" class="btn btn-primary btn-user btn-block">
-                                            <b>Restablecer Contraseña</b>
-                                        </a>
+                                        <a href="login.php" class="btn btn-primary btn-user btn-block">Restablecer Contraseña</a>
                                     </form>
                                     <br>
                                     <div class="text-center">

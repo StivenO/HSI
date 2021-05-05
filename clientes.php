@@ -10,7 +10,7 @@
     <meta name="description" content="Página principal de la Aplicación Web Hardware Store Inventory">
     <meta name="author" content="Hardware Store Inventory">
 
-    <title>HSI - Aplicación</title>
+    <title>HSI - Página en Blanco</title>
 
     <!-- Fuentes personalizadas para esta plantilla-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -28,7 +28,7 @@
     <!-- Envoltorio de página -->
     <div id="wrapper">
 
-        <!-- Barra lateral -->
+        <!-- barra lateral -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Barra lateral: marca -->
@@ -52,7 +52,7 @@
             <!-- Divisor -->
             <hr class="sidebar-divider">
 
-            <!-- Encabezado -->
+            <!-- Encavezado -->
             <div class="sidebar-heading">Gestión General</div>
 
             <!-- Elemento de navegación: menú desplegable del Administrador -->
@@ -442,248 +442,14 @@
                 <div class="container-fluid">
 
                     <!-- Encabezado de página -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Página Principal</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i>Generar Reportes</a>
-                    </div>
-
-                    <!-- Fila de contenido -->
-                    <div class="row">
-
-                        <!-- Ejemplo de tarjeta de inventario -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Inventario</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">40,000 unds</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Ejemplo de tarjeta de ventas (mensuales) -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Ventas (Mensuales)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$815,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Ejemplo de tarjeta de historial -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Historial
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Ejemplo de tarjeta de proveedores -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Proveedores</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Fila de contenido -->
-
-                    <div class="row">
-
-                        <!-- Gráfico de área -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Encabezado de la tarjeta: menú desplegable -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Resumen de Ganancias</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Ver ganancias por:</div>
-                                            <a class="dropdown-item" href="#">Año</a>
-                                            <a class="dropdown-item" href="#">Mes</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Día</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Cuerpo de la tarjeta -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Gráfico circular -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Encabezado de la tarjeta: menú desplegable -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Fuentes de Ingresos</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Ver ingresos por:</div>
-                                            <a class="dropdown-item" href="#">Año</a>
-                                            <a class="dropdown-item" href="#">Mes</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Día</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Gráfico circular -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Herramientas
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Eléctricos
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Materiales
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Fila de contenido -->
-                    <div class="row">
-
-                        <!-- Fila de columna -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Ejemplo de tarjeta de proyecto -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Proyectos</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Migración del Servidor <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Seguimiento de Ventas <span
-                                            class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Base de datos del Cliente <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Detalles de Pagos <span
-                                            class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Configuración de Cuenta <span
-                                            class="float-right">Completado!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
+                    <h1 class="h3 mb-4 text-gray-800">CRUD para Clientes</h1>
 
 
-                        </div>
+                    <!-- AQUÍ VA TOD0 EL PHP -->
 
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Enfoque de desarrollo -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Info Material Externo</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/externo.svg" alt="">
-                                    </div>
-                                    <p>Esta aplicación web tomó como base la plantilla SB Admin2 de
-                                          <a target="_blank" rel="nofollow" href="https://startbootstrap.com/theme/sb-admin-2">Bootstrap</a>, y
-                                          facilitó el uso de imágenes gratuitas con <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
 
                 </div>
-                <!-- /.container-fluid que está width: 100%en todos los puntos de interrupción -->
+                <!-- /.container-fluid -->
 
             </div>
             <!-- Fin del contenido principal -->
@@ -736,15 +502,8 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts para todas las páginas -->
+    <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Complementos de nivel de página -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Scripts,Nivel de página personalizado -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
