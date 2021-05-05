@@ -10,7 +10,7 @@
     <meta name="description" content="Página principal de la Aplicación Web Hardware Store Inventory">
     <meta name="author" content="Hardware Store Inventory">
 
-    <title>HSI - Página en Blanco</title>
+    <title>HSI - Proveedores</title>
 
     <!-- Fuentes personalizadas para esta plantilla-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
