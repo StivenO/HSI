@@ -497,7 +497,7 @@
 
                     			echo "<td>
 					<a href='editar.php?id={$datos['iduser']}' class='btn btn-warning'> Editar</a>
-					<a href='eliminar.php?id={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
+					<a href='usuario/eliminar.php?id={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
 				 </td>";
 
 			echo "</tr>";

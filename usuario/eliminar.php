@@ -1,15 +1,15 @@
-<?php 
-	
-	require 'conexion.php';
+<?php
 
-	$id = $_GET['id'];
+	require '../conexion/conexion.php';
 
-	$sql = "DELETE FROM personas WHERE id = $id";
-	
+	$iduser = $_GET['iduser'];
+
+	$sql = "DELETE FROM user WHERE iduser = $iduser";
+
 	$result = $con->query( $sql );
 
 	if ($result) {
-		header('location: index.php');
+		header('location: .../usuarios.php');
 	}else{
 		echo "Error!!!..." . $con->error;
 	}
