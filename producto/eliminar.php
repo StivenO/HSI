@@ -2,16 +2,16 @@
   require '../conexion/conexion.php';
 // resive datos
 
-  $iduser = $_GET['iduser'];
+  $idproduct = $_GET['idproduct'];
 
 // Eliminar datos
 
-  $sql = "DELETE FROM user WHERE iduser = $iduser";
+  $sql = "DELETE FROM product WHERE idproduct = $idproduct";
 
   $result = $con->query( $sql ); //envia a conexion
 
   if ($result) {
-    header("Location: ../usuarios.php");
+    header("Location: ../productos.php");
   }else {
     echo " Error al eliminar datos !" . $con->error;
   }

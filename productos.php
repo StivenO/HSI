@@ -448,7 +448,7 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require '../conexion/conexion.php';
-                      $sql = "SELECT * FROM user";
+                      $sql = "SELECT * FROM product";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -457,32 +457,25 @@
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
                             <tr>
-                              <th>Tipo de ID</th>
-                              <th>No. ID</th>
-                              <th>Nombre</th>
-                              <th>Apellido</th>
-                              <th style='width:300px'>Correo Electronico</th>
-                              <th> Nick </th>
-                              <th> Estado </th>
-                              <th> Rol </th>
-                    <th> ACCIONES </th>
+                              <th> Nombre </th>
+                              <th> Description </th>
+                              <th> Precio </th>
+                              <th> Tipo de unidad </th>
+                              <th> Categoria </th>
                             </tr>
                           </thead>
                           <tbody>";
                           while ($datos = $result->fetch_assoc()) {
                                   echo "<tr>";
-                                  echo "<td>". $datos['typeid_id'] ."</td>";
-                                  echo "<td>". $datos['numid'] ."</td>";
-                                  echo "<td>". $datos['nomuser'] ."</td>";
-                                  echo "<td>". $datos['apeuser'] ."</td>";
-                                  echo "<td>". $datos['emailuser'] ."</td>";
-                                  echo "<td>". $datos['nick'] ."</td>";
-                                  echo "<td>". $datos['state_id'] ."</td>";
-                                  echo "<td>". $datos['rol_id'] ."</td>";
+                                  echo "<td>". $datos['nomproduct'] ."</td>";
+                                  echo "<td>". $datos['description'] ."</td>";
+                                  echo "<td>". $datos['priceout'] ."</td>";
+                                  echo "<td>". $datos['unit_id'] ."</td>";
+                                  echo "<td>". $datos['category_id'] ."</td>";
 
                         echo "<td>
-        <a href='usuario/editar.php?iduser={$datos['iduser']}' class='btn btn-warning'> Editar </a>
-        <a href='usuario/eliminar.php?iduser={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
+        <a href='producto/editar.php?idproduct={$datos['idproduct']}' class='btn btn-warning'> Editar </a>
+        <a href='producto/eliminar.php?idproduct={$datos['idproduct']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
        </td>";
 
     echo "</tr>";
