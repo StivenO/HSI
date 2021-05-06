@@ -26,11 +26,10 @@
 	<a href="crear.php" class="btn btn-primary float-right">Nuevo</a>
 	<br>
 	<br>
-			
-	<?php 
-		require 'conexion.php';
-		$sql = "SELECT personas.*, ciudades.nombre AS ciudad FROM personas 
-					INNER JOIN ciudades ON ciudades.id = personas.ciudad_id";
+
+	<?php
+		require '../conexion/conexion.php';
+		$sql = "SELECT * FROM user";
 		$result = $con->query( $sql );
 
 		// $datos = $result->fetch_assoc();
@@ -51,19 +50,19 @@
 				<tbody>";
 		while ($datos = $result->fetch_assoc()) {
 			echo "<tr>";
-			echo "<td>". $datos['id'] ."</td>"; 	
-			echo "<td>". $datos['nombre'] ."</td>"; 	
-			echo "<td>". $datos['telefono'] ."</td>"; 	
-			echo "<td>". $datos['direccion'] ."</td>"; 	
-			echo "<td>". $datos['fecha_nacimiento'] ."</td>"; 	
-			echo "<td>". $datos['ciudad'] ."</td>"; 	
-			
-			echo "<td> 
-					<a href='editar.php?id={$datos['id']}' class='btn btn-warning'> Editar</a>	
-					<a href='eliminar.php?id={$datos['id']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a> 
-				 </td>"; 	
+			echo "<td>". $datos['id'] ."</td>";
+			echo "<td>". $datos['nombre'] ."</td>";
+			echo "<td>". $datos['telefono'] ."</td>";
+			echo "<td>". $datos['direccion'] ."</td>";
+			echo "<td>". $datos['fecha_nacimiento'] ."</td>";
+			echo "<td>". $datos['ciudad'] ."</td>";
 
-			echo "</tr>";	
+			echo "<td>
+					<a href='editar.php?id={$datos['id']}' class='btn btn-warning'> Editar</a>
+					<a href='eliminar.php?id={$datos['id']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
+				 </td>";
+
+			echo "</tr>";
 		}
 		echo "</tbody></table></div>";
 
@@ -74,7 +73,7 @@
 	<script src="plugins/jquery.js"></script>
 	<!-- <script src="plugins/datatables/js/jquery.dataTables.min.js"></script> -->
 	<!-- <script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script> -->
-	
+
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
@@ -86,7 +85,7 @@
 	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.js"></script>
 
 	<script>
-		
+
 		$('table').dataTable({
 			language: {
             	url: 'plugins/datatables/lang/Spanish.json'
@@ -99,7 +98,7 @@
 		            titleAttr:  'Exportar a excel',
 		            className : 'btn btn-success btn-lg',
 		            filename :  'Reporte de personas',
-		            exportOptions: 
+		            exportOptions:
 		            {
 		                columns: 	[0, 1,2,3,4,5]
 		            }
@@ -110,7 +109,7 @@
 		            titleAttr:  'Exportar a PDF',
 		            className : 'btn btn-danger btn-lg',
 		            filename :  'Reporte de personas',
-		            exportOptions: 
+		            exportOptions:
 		            {
 		                columns: [0, 1,2,3,4,5]
 		            }
@@ -121,7 +120,7 @@
 		            titleAttr:  'Imprimir',
 		            className : 'btn btn-info btn-lg',
 		            filename :  'Reporte de personas',
-		            exportOptions: 
+		            exportOptions:
 		            {
 		                columns: [0, 1,2,3,4,5]
 		            }
