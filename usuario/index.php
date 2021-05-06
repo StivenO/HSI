@@ -74,8 +74,8 @@
 	</div>
 
 	<script src="plugins/jquery.js"></script>
-	<!-- <script src="plugins/datatables/js/jquery.dataTables.min.js"></script> -->
-	<!-- <script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script> -->
+	 <script src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+	 <script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
