@@ -496,7 +496,7 @@
                     								echo "<td>". $datos['rol_id'] ."</td>";
 
                     			echo "<td>
-					<a href='editar.php?iduser={$datos['iduser']}' class='btn btn-warning'> Editar </a>
+					<a href='usuario/editar.php?iduser={$datos['iduser']}' class='btn btn-warning'> Editar </a>
 					<a href='usuario/eliminar.php?iduser={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
 				 </td>";
 
