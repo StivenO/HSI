@@ -38,28 +38,31 @@
 			  <table class='table table-hover table-striped table-bordered table-sm'>
 				<thead>
 				  <tr>
-				  	<th>ID</th>
-				  	<th>NOMBRE</th>
-				  	<th>TELÉFONO</th>
-				  	<th style='width:300px'>DIRECCIÓN</th>
-				  	<th>FECHA NAC.</th>
-				  	<th>CIUDAD</th>
-				  	<th>ACCIONES</th>
+				  	<th>Tipo de ID</th>
+						<th>No. ID</th>
+				  	<th>Nombre</th>
+				  	<th>Apellido</th>
+				  	<th style='width:300px'>Correo Electronico</th>
+				  	<th> Nick </th>
+				  	<th> Estado </th>
+				  	<th> Rol </th>
 				  </tr>
 				</thead>
 				<tbody>";
-		while ($datos = $result->fetch_assoc()) {
-			echo "<tr>";
-			echo "<td>". $datos['id'] ."</td>";
-			echo "<td>". $datos['nombre'] ."</td>";
-			echo "<td>". $datos['telefono'] ."</td>";
-			echo "<td>". $datos['direccion'] ."</td>";
-			echo "<td>". $datos['fecha_nacimiento'] ."</td>";
-			echo "<td>". $datos['ciudad'] ."</td>";
+				while ($datos = $result->fetch_assoc()) {
+								echo "<tr>";
+								echo "<td>". $datos['typeid_id'] ."</td>";
+								echo "<td>". $datos['numid'] ."</td>";
+								echo "<td>". $datos['nomuser'] ."</td>";
+								echo "<td>". $datos['apeuser'] ."</td>";
+								echo "<td>". $datos['emailuser'] ."</td>";
+								echo "<td>". $datos['nick'] ."</td>";
+								echo "<td>". $datos['state_id'] ."</td>";
+								echo "<td>". $datos['rol_id'] ."</td>";
 
 			echo "<td>
-					<a href='editar.php?id={$datos['id']}' class='btn btn-warning'> Editar</a>
-					<a href='eliminar.php?id={$datos['id']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
+					<a href='editar.php?id={$datos['iduser']}' class='btn btn-warning'> Editar</a>
+					<a href='eliminar.php?id={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
 				 </td>";
 
 			echo "</tr>";
