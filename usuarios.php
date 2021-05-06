@@ -457,7 +457,7 @@
 
                     	<hr>
 
-                    	<a href="crear.php" class="btn btn-primary float-right">Nuevo</a>
+                    	<a href="usuario/crear.php" class="btn btn-primary float-right">Nuevo</a>
                     	<br>
                     	<br>
 
