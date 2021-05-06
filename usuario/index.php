@@ -15,7 +15,7 @@
 <body>
 
 	<center>
-		<h1> .: Contactos :. </h1>
+		<h1> .: Usuarios :. </h1>
 	</center>
 
 
