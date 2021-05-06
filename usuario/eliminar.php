@@ -1,17 +1,19 @@
 <?php
+  require '../conexion/conexion.php';
+// resive datos
 
-	require '../conexion/conexion.php';
+  $iduser = $_GET['iduser'];
 
-	$iduser = $_GET['iduser'];
+// Eliminar datos
 
-	$sql = "DELETE FROM user WHERE iduser = $iduser";
+  $sql = "DELETE FROM user WHERE iduser = $iduser";
 
-	$result = $con->query( $sql );
+  $result = $con->query( $sql ); //envia a conexion
 
-	if ($result) {
-		header('location: .../usuarios.php');
-	}else{
-		echo "Error!!!..." . $con->error;
-	}
+  if ($result) {
+    header("Location: ../usuarios.php");
+  }else {
+    echo " Error al eliminar datos !" . $con->error;
+  }
 
-?>
+ ?>

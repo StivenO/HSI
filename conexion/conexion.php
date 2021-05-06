@@ -8,7 +8,7 @@
   $con = new mysqli($servidor, $usuario, $password, $bd);
 
 
-  /* verificar si se realizo bien la conexion
+  /*verificar si se realizo bien la conexion
   echo "<pre>";
   var_dump($con);
   echo "</pre>";
