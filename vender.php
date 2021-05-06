@@ -443,10 +443,10 @@
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Página donde se hacen las Ventas</h1>
-
+                    <!-- AQUÍ VA TOD0 EL PHP -->
+                    
 
                     <!-- AQUÍ VA TOD0 EL PHP -->
-
 
                 </div>
                 <!-- /.container-fluid -->
