@@ -460,8 +460,10 @@
                               <th> Nombre </th>
                               <th> Description </th>
                               <th> Precio </th>
+                              <th> Cantidad </th>
                               <th> Tipo de unidad </th>
                               <th> Categoria </th>
+                              <th style='width:200px' > Accion </th>
                             </tr>
                           </thead>
                           <tbody>";
@@ -470,6 +472,7 @@
                                   echo "<td>". $datos['nomproduct'] ."</td>";
                                   echo "<td>". $datos['description'] ."</td>";
                                   echo "<td>". $datos['priceout'] ."</td>";
+                                  echo "<td>". $datos['quantity'] ."</td>";
                                   echo "<td>". $datos['unit_id'] ."</td>";
                                   echo "<td>". $datos['category_id'] ."</td>";
 

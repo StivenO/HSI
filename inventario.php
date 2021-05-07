@@ -443,9 +443,48 @@
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Muestra el inventario (Posible CRUD)</h1>
-
-
                     <!-- AQUÍ VA TOD0 EL PHP -->
+                    <!-- AQUÍ VA TOD0 EL PHP -->
+                    <?php
+                      require '../conexion/conexion.php';
+                      $sql = "SELECT * FROM product WHERE  quantity >'0'";
+                      $result = $con->query( $sql );
+
+                      // $datos = $result->fetch_assoc();
+
+                      echo "<div class='table-responsive'>
+                          <table class='table table-hover table-striped table-bordered table-sm'>
+                          <thead>
+                            <tr>
+                              <th> Nombre </th>
+                              <th> Description </th>
+                              <th> Precio </th>
+                              <th> Cantidad </th>
+                              <th> Tipo de unidad </th>
+                              <th> Categoria </th>
+                              <th style='width:200px' > Accion </th>
+                            </tr>
+                          </thead>
+                          <tbody>";
+                          while ($datos = $result->fetch_assoc()) {
+                                  echo "<tr>";
+                                  echo "<td>". $datos['nomproduct'] ."</td>";
+                                  echo "<td>". $datos['description'] ."</td>";
+                                  echo "<td>". $datos['priceout'] ."</td>";
+                                  echo "<td>". $datos['quantity'] ."</td>";
+                                  echo "<td>". $datos['unit_id'] ."</td>";
+                                  echo "<td>". $datos['category_id'] ."</td>";
+
+                        echo "<td>
+        <a href='inventario/editar.php?idproduct={$datos['idproduct']}' class='btn btn-warning'> Editar </a>
+        <a href='inventario/eliminar.php?idproduct={$datos['idproduct']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
+       </td>";
+
+    echo "</tr>";
+  }
+  echo "</tbody></table></div>";
+?>
+
 
 
                 </div>
@@ -494,7 +533,65 @@
             </div>
         </div>
     </div>
+    <script src="plugins/jquery.js"></script>
+      <!-- <script src="plugins/datatables/js/jquery.dataTables.min.js"></script> -->
+      <!-- <script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script> -->
 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.bootstrap4.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.js"></script>
+
+      <script>
+
+        $('table').dataTable({
+          language: {
+                  url: 'plugins/datatables/lang/Spanish.json'
+              },
+              dom: 'Bfrtip',
+              buttons: [
+                  {
+                    extend :    'excelHtml5',
+                    text :      '<i class="fas fa-file-excel">',
+                    titleAttr:  'Exportar a excel',
+                    className : 'btn btn-success btn-lg',
+                    filename :  'Reporte de personas',
+                    exportOptions:
+                    {
+                        columns: 	[0, 1,2,3,4,5]
+                    }
+                  },
+                  {
+                    extend :   'pdfHtml5',
+                    text :      '<i class="fas fa-file-pdf">',
+                    titleAttr:  'Exportar a PDF',
+                    className : 'btn btn-danger btn-lg',
+                    filename :  'Reporte de personas',
+                    exportOptions:
+                    {
+                        columns: [0, 1,2,3,4,5]
+                    }
+                  },
+                  {
+                    extend :   'print',
+                    text :      '<i class="fas fa-print">',
+                    titleAttr:  'Imprimir',
+                    className : 'btn btn-info btn-lg',
+                    filename :  'Reporte de personas',
+                    exportOptions:
+                    {
+                        columns: [0, 1,2,3,4,5]
+                    }
+                  },
+                ]
+          });
+
+      </script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
