@@ -448,7 +448,7 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require '../conexion/conexion.php';
-                      $sql = "SELECT * FROM user";
+                      $sql = "SELECT * FROM person WHERE ptype_id = '1'";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -461,10 +461,9 @@
                               <th>No. ID</th>
                               <th>Nombre</th>
                               <th>Apellido</th>
+                              <th> Dirección </th>
+                              <th> Telefono </th>
                               <th style='width:300px'>Correo Electronico</th>
-                              <th> Nick </th>
-                              <th> Estado </th>
-                              <th> Rol </th>
                     <th> ACCIONES </th>
                             </tr>
                           </thead>
@@ -473,16 +472,15 @@
                                   echo "<tr>";
                                   echo "<td>". $datos['typeid_id'] ."</td>";
                                   echo "<td>". $datos['numid'] ."</td>";
-                                  echo "<td>". $datos['nomuser'] ."</td>";
-                                  echo "<td>". $datos['apeuser'] ."</td>";
-                                  echo "<td>". $datos['emailuser'] ."</td>";
-                                  echo "<td>". $datos['nick'] ."</td>";
-                                  echo "<td>". $datos['state_id'] ."</td>";
-                                  echo "<td>". $datos['rol_id'] ."</td>";
+                                  echo "<td>". $datos['nomperson'] ."</td>";
+                                  echo "<td>". $datos['apeperson'] ."</td>";
+                                  echo "<td>". $datos['address'] ."</td>";
+                                  echo "<td>". $datos['phone'] ."</td>";
+                                  echo "<td>". $datos['emailperson'] ."</td>";
 
                         echo "<td>
-        <a href='usuario/editar.php?iduser={$datos['iduser']}' class='btn btn-warning'> Editar </a>
-        <a href='usuario/eliminar.php?iduser={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
+        <a href='proveedor/editar.php?idperson={$datos['idperson']}' class='btn btn-warning'> Editar </a>
+        <a href='proveedor/eliminar.php?idperson={$datos['idperson']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
        </td>";
 
     echo "</tr>";
@@ -490,7 +488,6 @@
   echo "</tbody></table></div>";
 
 ?>
-
 
                 </div>
                 <!-- /.container-fluid -->
