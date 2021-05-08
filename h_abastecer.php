@@ -402,9 +402,7 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require 'conexion/conexion.php';
-                      $sql = "SELECT * FROM sell INNER JOIN user ON sell.user_id = user.iduser
-                      INNER JOIN person ON sell.person_id = person.idperson
-                       WHERE opetype_id = 2";
+                      $sql = "SELECT * FROM sell INNER JOIN user ON sell.user_id = user.iduser INNER JOIN person ON sell.person_id = person.idperson WHERE opetype_id = 2";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -424,6 +422,7 @@
                           <tbody>";
                           while ($datos = $result->fetch_assoc()) {
                                   echo "<tr>";
+
                                   echo "<td>". $datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
                                   echo "<td>".$datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
                                   echo "<td>$ ". number_format($datos['cash']) ."</td>";
