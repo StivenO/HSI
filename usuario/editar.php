@@ -8,7 +8,7 @@
 <body>
 
 	<center>
-		<h1> .: Editar contacto :. </h1>
+		<h1> .: Editar un Usuario :. </h1>
 	</center>
 
 
@@ -16,15 +16,15 @@
 
 	<hr>
 
-	<a href="index.php" class="btn btn-secondary float-right">volver</a>
+	<a href="../usuarios.php" class="btn btn-secondary float-right">volver</a>
 	<br>
 	<br>
 
-	<?php 
-		
-		require 'conexion.php';
-		
-		$id = $_GET['id'];
+	<?php
+
+		require '../conexion/conexion.php';
+
+		$id = $_GET['iduser'];
 		$sql = "SELECT * FROM personas WHERE id = $id";
 		$result = $con->query( $sql );
 		$persona = $result->fetch_assoc();
@@ -39,7 +39,7 @@
 			$fec = $_POST['fec'];
 			$ciu = $_POST['ciu'];
 
-			$sql = "UPDATE personas 
+			$sql = "UPDATE personas
 					SET nombre = '$nom', telefono = '$tel', direccion = '$dir', fecha_nacimiento = '$fec', ciudad_id = '$ciu'
 					WHERE id = $id";
 
@@ -49,13 +49,13 @@
 				header('location: index.php');
 			else
 				echo "Error!!!..." . $con->error;
-			
+
 		}
 
 	?>
 
 	<form method="POST" style="width: 500px;">
-	
+
 		<label for="">Nombre</label>
 		<input class="form-control" name="nom" value="<?= $persona['nombre'] ?>">
 		<br>
@@ -77,8 +77,8 @@
 				if( $ciudad['id'] == $persona['ciudad_id'])
 					echo "<option selected value='".$ciudad['id']."'>".$ciudad['nombre']."</option>";
 				else
-					echo "<option value='".$ciudad['id']."'>".$ciudad['nombre']."</option>";		
-			}	
+					echo "<option value='".$ciudad['id']."'>".$ciudad['nombre']."</option>";
+			}
 			?>
 		</select>
 		<br>

@@ -446,7 +446,7 @@
 
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
-                      require '../conexion/conexion.php';
+                      require 'conexion/conexion.php';
                       $sql = "SELECT * FROM product WHERE quantity < stockmin";
                       $result = $con->query( $sql );
 

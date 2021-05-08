@@ -446,7 +446,7 @@
 
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
-                      require '../conexion/conexion.php';
+                      require 'conexion/conexion.php';
                       $sql = "SELECT * FROM person WHERE ptype_id = '2'";
                       $result = $con->query( $sql );
 
@@ -460,7 +460,7 @@
                               <th>No. ID</th>
                               <th>Nombre</th>
                               <th>Apellido</th>
-                              <th> Dirección </th>
+                              <th>Dirección</th>
                               <th> Telefono </th>
                               <th style='width:300px'>Correo Electronico</th>
                     <th> ACCIONES </th>
