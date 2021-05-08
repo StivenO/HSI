@@ -96,7 +96,7 @@
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">detalle de tesorería:</h6>
+                        <h6 class="collapse-header">Detalle de tesorería:</h6>
                         <a class="collapse-item" href="ventas.php">Historial de ventas</a>
                         <a class="collapse-item" href="caja.php">Caja</a>
                     </div>
