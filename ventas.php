@@ -405,9 +405,7 @@
                     <?php
                       require 'conexion/conexion.php';
                       $sql = "SELECT * FROM sell
-                      INNER JOIN person ON sell.person_id = person.idperson
-                      INNER JOIN user ON sell.user_id = user.iduser
-                      WHERE user_id =".$_SESSION['id']. " AND opetype_id ='2'";
+                      INNER JOIN person ON sell.person_id = person.idperson INNER JOIN user ON sell.user_id = user.iduser WHERE user_id =".$_SESSION['id']. " AND opetype_id ='2'";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
