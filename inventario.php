@@ -447,7 +447,7 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require 'conexion/conexion.php';
-                      $sql = "SELECT * FROM product WHERE  quantity >'0'";
+                      $sql = "SELECT * FROM product pd INNER JOIN unit ut ON pd.unit_id = ut.idunit INNER JOIN category ct ON pd.category_id = ct.idcategory WHERE pd.quantity >'0'";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -472,8 +472,8 @@
                                   echo "<td>". $datos['description'] ."</td>";
                                   echo "<td>". $datos['priceout'] ."</td>";
                                   echo "<td>". $datos['quantity'] ."</td>";
-                                  echo "<td>". $datos['unit_id'] ."</td>";
-                                  echo "<td>". $datos['category_id'] ."</td>";
+                                  echo "<td>". $datos['nomunit'] ."</td>";
+                                  echo "<td>". $datos['nomcategory'] ."</td>";
 
                         echo "<td>
         <a href='inventario/editar.php?idproduct={$datos['idproduct']}' class='btn btn-warning'> Editar </a>
