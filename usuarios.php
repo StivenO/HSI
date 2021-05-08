@@ -409,7 +409,7 @@
 
                       <?php
                     		require 'conexion/conexion.php';
-                    		$sql = "SELECT * FROM user";
+                    		$sql = "SELECT * FROM user INNER JOIN typeid ON user.typeid_id = typeid.idtypeid";
                     		$result = $con->query( $sql );
 
                     		// $datos = $result->fetch_assoc();
@@ -422,7 +422,7 @@
                     						<th>No. ID</th>
                     				  	<th>Nombre</th>
                     				  	<th>Apellido</th>
-                    				  	<th style='width:300px'>Correo Electronico</th>
+                    				  	<th style='width:250px'>Correo Electronico</th>
                     				  	<th> Nick </th>
                     				  	<th> Estado </th>
                     				  	<th> Rol </th>
@@ -432,7 +432,7 @@
                     				<tbody>";
                     				while ($datos = $result->fetch_assoc()) {
                     								echo "<tr>";
-                    								echo "<td>". $datos['typeid_id'] ."</td>";
+                    								echo "<td>". $datos['nomtypeid'] ."</td>";
                     								echo "<td>". $datos['numid'] ."</td>";
                     								echo "<td>". $datos['nomuser'] ."</td>";
                     								echo "<td>". $datos['apeuser'] ."</td>";
@@ -442,7 +442,7 @@
                     								echo "<td>". $datos['rol_id'] ."</td>";
 
                     			echo "<td>
-					<a href='usuario/editar.php?iduser={$datos['iduser']}' class='btn btn-warning'> Editar </a>
+					<a href='usuario/editar.php?iduser={$datos['iduser']}' class='btn btn-info'> Editar </a>
 					<a href='usuario/eliminar.php?iduser={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
 				 </td>";
 

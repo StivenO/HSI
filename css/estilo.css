@@ -11259,3 +11259,24 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+#DataTables_Table_0_filter{
+  text-align: right;
+
+}
+
+#DataTables_Table_0_filter > label{
+  display: inline-flex;
+}
+
+#DataTables_Table_0_filter input{
+  margin-left: 5px;
+}
+
+#DataTables_Table_0_paginate{
+  float:right;
+}
+
+#DataTables_Table_0_info{
+  float: left;
+}
