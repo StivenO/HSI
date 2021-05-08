@@ -409,7 +409,7 @@
 
                       <?php
                     		require 'conexion/conexion.php';
-                    		$sql = "SELECT * FROM user INNER JOIN typeid ON user.typeid_id = typeid.idtypeid";
+                    		$sql = "SELECT * FROM user INNER JOIN typeid ON user.typeid_id = typeid.idtypeid INNER JOIN state ON user.state_id = state.idstate INNER JOIN rol ON user.rol_id = rol.idrol";
                     		$result = $con->query( $sql );
 
                     		// $datos = $result->fetch_assoc();
@@ -438,8 +438,8 @@
                     								echo "<td>". $datos['apeuser'] ."</td>";
                     								echo "<td>". $datos['emailuser'] ."</td>";
                     								echo "<td>". $datos['nick'] ."</td>";
-                    								echo "<td>". $datos['state_id'] ."</td>";
-                    								echo "<td>". $datos['rol_id'] ."</td>";
+                    								echo "<td>". $datos['nomstate'] ."</td>";
+                    								echo "<td>". $datos['nomrol'] ."</td>";
 
                     			echo "<td>
 					<a href='usuario/editar.php?iduser={$datos['iduser']}' class='btn btn-info'> Editar </a>
