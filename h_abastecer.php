@@ -402,7 +402,7 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require 'conexion/conexion.php';
-                      $sql = "SELECT * FROM sell INNER JOIN user ON sell.user_id = user.iduser WHERE opetype_id = 2";
+                      $sql = "SELECT * FROM sell INNER JOIN user ON sell.user_id = user.iduser INNER JOIN person ON sell.person_id = person.idperson WHERE opetype_id = 2";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -411,29 +411,28 @@
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
                             <tr>
-                              <th> Nombre </th>
-                              <th> Precio </th>
-                              <th> Cantidad </th>
-                              <th> Tipo de unidad </th>
-                              <th> Categoria </th>
-                              <th> Categoria </th>
+                              <th> Proveedor </th>
+                              <th> Encargado </th>
+                              <th> Costo </th>
+                              <th> Fecha y Hora </th>
+                              <th> Total </th>
 
                             </tr>
                           </thead>
                           <tbody>";
                           while ($datos = $result->fetch_assoc()) {
                                   echo "<tr>";
+
                                   echo "<td>". $datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
-                                  echo "<td>". $datos['opetype_id'] ."</td>";
+                                  echo "<td>".$datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
                                   echo "<td>$ ". number_format($datos['cash']) ."</td>";
-                                  echo "<td>". $datos['disc'] ."</td>";
                                   echo "<td>". $datos['date'] ."</td>";
-                                  echo "<td>". $datos['total'] ."</td>";
+                                  echo "<td>$ ". number_format($datos['total']) ."</td>";
 
     echo "</tr>";
   }
   echo "</tbody></table></div>";
-?>
+  ?>
 
                 </div>
                 <!-- /.container-fluid -->
