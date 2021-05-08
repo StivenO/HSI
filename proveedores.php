@@ -447,7 +447,7 @@
 
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
-                      require '../conexion/conexion.php';
+                      require 'conexion/conexion.php';
                       $sql = "SELECT * FROM person WHERE ptype_id = '1'";
                       $result = $con->query( $sql );
 

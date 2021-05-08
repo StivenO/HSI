@@ -460,7 +460,7 @@
                               <th>No. ID</th>
                               <th>Nombre</th>
                               <th>Apellido</th>
-                              <th> Dirección </th>
+                              <th>Dirección</th>
                               <th> Telefono </th>
                               <th style='width:300px'>Correo Electronico</th>
                     <th> ACCIONES </th>

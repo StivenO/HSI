@@ -441,28 +441,17 @@
                 <!-- Contenido de la página de inicio -->
                 <div class="container-fluid">
 
+                    <a href="usuario/crear.php" class="btn btn-primary float-right">Agregar Usuario</a>
                     <!-- Encabezado de página -->
-                    <h1 class="h3 mb-4 text-gray-800">CRUD para Usuarios</h1>
-
+                    <h1 class="h3 mb-4 text-gray-800">Gestión de Usuarios</h1>
 
                     <!-- AQUÍ VA TOD0 EL PHP -->
-                    <body>
-
-                    	<center>
-                    		<h1> .: Usuarios :. </h1>
-                    	</center>
-
 
                     	<div class="container">
-
                     	<hr>
 
-                    	<a href="usuario/crear.php" class="btn btn-primary float-right">Nuevo</a>
-                    	<br>
-                    	<br>
-
                       <?php
-                    		require '../conexion/conexion.php';
+                    		require 'conexion/conexion.php';
                     		$sql = "SELECT * FROM user";
                     		$result = $con->query( $sql );
 
@@ -471,7 +460,7 @@
                     		echo "<div class='table-responsive'>
                     			  <table class='table table-hover table-striped table-bordered table-sm'>
                     				<thead>
-                    				  <tr>
+                    				  <tr class='text-center'>
                     				  	<th>Tipo de ID</th>
                     						<th>No. ID</th>
                     				  	<th>Nombre</th>
@@ -480,7 +469,7 @@
                     				  	<th> Nick </th>
                     				  	<th> Estado </th>
                     				  	<th> Rol </th>
-											<th> ACCIONES </th>
+											          <th> Acciones </th>
                     				  </tr>
                     				</thead>
                     				<tbody>";
@@ -507,8 +496,6 @@
 	?>
 
                     	</div>
-
-                    </body>
 
 
                 </div>
@@ -560,8 +547,8 @@
 
 
     <script src="plugins/jquery.js"></script>
-    	<!-- <script src="plugins/datatables/js/jquery.dataTables.min.js"></script> -->
-    	<!-- <script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script> -->
+    	<!-- <script src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+    	<script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script> -->
 
     	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
     	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
@@ -573,7 +560,7 @@
     	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.js"></script>
     	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.js"></script>
 
-    	<script>
+    	<div class="float-right"><script>
 
     		$('table').dataTable({
     			language: {
@@ -586,10 +573,10 @@
     		            text :      '<i class="fas fa-file-excel">',
     		            titleAttr:  'Exportar a excel',
     		            className : 'btn btn-success btn-lg',
-    		            filename :  'Reporte de personas',
+    		            filename :  'Reporte de Usuarios',
     		            exportOptions:
     		            {
-    		                columns: 	[0, 1,2,3,4,5]
+    		                columns: 	[0, 1,2,3,4,5,6,7]
     		            }
     		          },
     		          {
@@ -597,10 +584,10 @@
     		            text :      '<i class="fas fa-file-pdf">',
     		            titleAttr:  'Exportar a PDF',
     		            className : 'btn btn-danger btn-lg',
-    		            filename :  'Reporte de personas',
+    		            filename :  'Reporte de Usuarios',
     		            exportOptions:
     		            {
-    		                columns: [0, 1,2,3,4,5]
+    		                columns: [0, 1,2,3,4,5,6,7]
     		            }
     		          },
     		          {
@@ -608,16 +595,16 @@
     		            text :      '<i class="fas fa-print">',
     		            titleAttr:  'Imprimir',
     		            className : 'btn btn-info btn-lg',
-    		            filename :  'Reporte de personas',
+    		            filename :  'Reporte de Usuarios',
     		            exportOptions:
     		            {
-    		                columns: [0, 1,2,3,4,5]
+    		                columns: [0, 1,2,3,4,5,6,7]
     		            }
     		          },
     		        ]
     	    });
 
-    	</script>
+    	</script></div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
