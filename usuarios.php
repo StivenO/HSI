@@ -397,7 +397,7 @@
                 <!-- Contenido de la página de inicio -->
                 <div class="container-fluid">
 
-                    <a href="usuario/crear.php" class="btn btn-primary float-right">Agregar Usuario</a>
+                    <a href="usuario/crear.php" class="btn btn-primary float-right"><i class="fas fa-user-plus"></i> Agregar Usuario</a>
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Gestión de Usuarios</h1>
@@ -418,21 +418,21 @@
                     			  <table class='table table-hover table-striped table-bordered table-sm'>
                     				<thead>
                     				  <tr class='text-center'>
-                    				  	<th>Tipo de ID</th>
+                    				  	<th style='width:100px'>Tipo de ID</th>
                     						<th>No. ID</th>
                     				  	<th>Nombre</th>
                     				  	<th>Apellido</th>
                     				  	<th style='width:250px'>Correo Electronico</th>
-                    				  	<th> Nick </th>
-                    				  	<th> Estado </th>
-                    				  	<th> Rol </th>
-											          <th> Acciones </th>
+                    				  	<th>Nick</th>
+                    				  	<th>Estado</th>
+                    				  	<th>Rol</th>
+											          <th>Acciones</th>
                     				  </tr>
                     				</thead>
                     				<tbody>";
                     				while ($datos = $result->fetch_assoc()) {
                     								echo "<tr>";
-                    								echo "<td>". $datos['nomtypeid'] ."</td>";
+                    								echo "<td style='text-align:center'>". $datos['nomtypeid'] ."</td>";
                     								echo "<td>". $datos['numid'] ."</td>";
                     								echo "<td>". $datos['nomuser'] ."</td>";
                     								echo "<td>". $datos['apeuser'] ."</td>";
@@ -442,8 +442,8 @@
                     								echo "<td>". $datos['nomrol'] ."</td>";
 
                     			echo "<td>
-					<a href='usuario/editar.php?iduser={$datos['iduser']}' class='btn btn-info'> Editar </a>
-					<a href='usuario/eliminar.php?iduser={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
+					<a href='usuario/editar.php?iduser={$datos['iduser']}' class='btn btn-info'> <i class='fas fa-edit ' style='size:5x'></i> </a>
+					<a href='usuario/eliminar.php?iduser={$datos['iduser']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> <i class='fas fa-trash-alt'></i> </a>
 				 </td>";
 
 			echo "</tr>";

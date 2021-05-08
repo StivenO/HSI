@@ -397,7 +397,7 @@
                 <!-- Contenido de la página de inicio -->
                 <div class="container-fluid">
 
-                    <a href="cliente/crear.php" class="btn btn-primary float-right">Agregar Cliente</a>
+                    <a href="cliente/crear.php" class="btn btn-primary float-right"><i class="fas fa-user-plus"></i> Agregar Cliente</a>
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Gestión de Clientes</h1>
@@ -413,8 +413,8 @@
                       echo "<div class='table-responsive'>
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
-                            <tr>
-                              <th>Tipo de ID</th>
+                            <tr class='text-center'>
+                              <th style='width:100px'>Tipo de ID</th>
                               <th>No. ID</th>
                               <th>Nombre</th>
                               <th>Apellido</th>
@@ -427,7 +427,7 @@
                           <tbody>";
                           while ($datos = $result->fetch_assoc()) {
                                   echo "<tr>";
-                                  echo "<td>". $datos['nomtypeid'] ."</td>";
+                                  echo "<td style='text-align:center'>". $datos['nomtypeid'] ."</td>";
                                   echo "<td>". $datos['numid'] ."</td>";
                                   echo "<td>". $datos['nomperson'] ."</td>";
                                   echo "<td>". $datos['apeperson'] ."</td>";
@@ -436,9 +436,9 @@
                                   echo "<td>". $datos['emailperson'] ."</td>";
 
                         echo "<td>
-        <a href='cliente/editar.php?idperson={$datos['idperson']}' class='btn btn-warning'> Editar </a>
-        <a href='cliente/eliminar.php?idperson={$datos['idperson']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
-       </td>";
+                        <a href='cliente/editar.php?iduser={$datos['idperson']}' class='btn btn-info'> <i class='fas fa-edit ' style='size:5x'></i> </a>
+                        <a href='cliente/eliminar.php?iduser={$datos['idperson']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> <i class='fas fa-trash-alt'></i> </a>
+                  </td>";
 
     echo "</tr>";
   }

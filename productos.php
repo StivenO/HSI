@@ -397,7 +397,7 @@
                 <!-- Contenido de la página de inicio -->
                 <div class="container-fluid">
 
-                    <a href="producto/crear.php" class="btn btn-primary float-right">Agregar Producto</a>
+                    <a href="producto/crear.php" class="btn btn-primary float-right"><i class="fas fa-user-plus"></i> Agregar Producto</a>
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Gestión de Productos</h1>
@@ -414,14 +414,14 @@
                       echo "<div class='table-responsive'>
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
-                            <tr>
-                              <th> Nombre </th>
-                              <th> Description </th>
-                              <th> Precio </th>
-                              <th> Cantidad </th>
-                              <th> Tipo de unidad </th>
-                              <th> Categoria </th>
-                              <th style='width:200px' > Accion </th>
+                            <tr class='text-center'>
+                              <th>Nombre</th>
+                              <th>Description</th>
+                              <th>Precio</th>
+                              <th>Cantidad</th>
+                              <th>Tipo de unidad</th>
+                              <th>Categoria </th>
+                              <th style='width:200px' >Accion</th>
                             </tr>
                           </thead>
                           <tbody>";
@@ -435,9 +435,9 @@
                                   echo "<td>". $datos['nomcategory'] ."</td>";
 
                         echo "<td>
-        <a href='producto/editar.php?idproduct={$datos['idproduct']}' class='btn btn-warning'> Editar </a>
-        <a href='producto/eliminar.php?idproduct={$datos['idproduct']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
-       </td>";
+                        <a href='producto/editar.php?iduser={$datos['idproduct']}' class='btn btn-info'> <i class='fas fa-edit ' style='size:5x'></i> </a>
+                        <a href='producto/eliminar.php?iduser={$datos['idproduct']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> <i class='fas fa-trash-alt'></i> </a>
+                       </td>";
 
     echo "</tr>";
   }

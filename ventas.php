@@ -413,12 +413,12 @@
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
                             <tr>
-                              <th> Nombre </th>
-                              <th> Precio </th>
-                              <th> Cantidad </th>
-                              <th> Tipo de unidad </th>
-                              <th> Categoria </th>
-                              <th> Categoria </th>
+                              <th>Cliente</th>
+                              <th>Operación</th>
+                              <th>Efectivo</th>
+                              <th>Descuento</th>
+                              <th>Fecha y Hora</th>
+                              <th>Total</th>
 
                             </tr>
                           </thead>
@@ -428,9 +428,9 @@
                                   echo "<td>". $datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
                                   echo "<td>". $datos['opetype_id'] ."</td>";
                                   echo "<td>$ ". number_format($datos['cash']) ."</td>";
-                                  echo "<td>". $datos['disc'] ."</td>";
+                                  echo "<td>$ ". number_format($datos['disc']) ."</td>";
                                   echo "<td>". $datos['date'] ."</td>";
-                                  echo "<td>". $datos['total'] ."</td>";
+                                  echo "<td>$ ". number_format($datos['total']) ."</td>";
 
     echo "</tr>";
   }
