@@ -28,7 +28,7 @@
     <!-- Envoltorio de página -->
     <div id="wrapper">
 
-        <!-- barra lateral -->
+        <!-- Barra lateral -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Barra lateral: marca -->
@@ -41,6 +41,10 @@
 
             <!-- Divisor -->
             <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider">
+
+            <!-- Encabezado -->
+            <div class="sidebar-heading">Gestión Control</div>
 
             <!-- Elemento de navegación: panel -->
             <li class="nav-item active">
@@ -52,7 +56,7 @@
             <!-- Divisor -->
             <hr class="sidebar-divider">
 
-            <!-- Encavezado -->
+            <!-- Encabezado -->
             <div class="sidebar-heading">Gestión General</div>
 
             <!-- Elemento de navegación: menú desplegable del Administrador -->
@@ -96,7 +100,7 @@
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">detalle de tesorería:</h6>
+                        <h6 class="collapse-header">Detalle de tesorería:</h6>
                         <a class="collapse-item" href="ventas.php">Historial de ventas</a>
                         <a class="collapse-item" href="caja.php">Caja</a>
                     </div>
@@ -169,46 +173,6 @@
                 </div>
             </li>
 
-            <!-- Divisor -->
-            <hr class="sidebar-divider">
-
-            <!-- Encabezado -->
-            <div class="sidebar-heading">Complemento</div>
-
-            <!-- Elemento de navegación: menú contraer páginas -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Páginas</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Pantallas inicio sesión:</h6>
-                        <a class="collapse-item" href="login.php">Iniciar sesión</a>
-                        <a class="collapse-item" href="registrarse.php">Registrarse</a>
-                        <a class="collapse-item" href="recuperar_clave.php">Recuperar contraseña</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Otras páginas:</h6>
-                        <a class="collapse-item" href="404.php">Página 404</a>
-                        <a class="collapse-item" href="blank.php">Página en Blanco</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Elemento de navegación: gráficos -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Gráficas</span></a>
-            </li>
-
-            <!-- Elemento de navegación: tablas -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tablas</span></a>
-            </li>
 
             <!-- Divisor -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -246,7 +210,7 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar por..."
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
@@ -288,8 +252,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
-                                <!-- Contador - Alertas / Para Notificaciones-->
-                                <span class="badge badge-danger badge-counter">3+</span>
+                                <!-- Contador - Alertas / Para Notificaciones
+                                <span class="badge badge-danger badge-counter">3+</span> -->
                             </a>
                             <!-- Menú desplegable - Alertas -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -340,7 +304,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Contador - Mensajes -->
-                                <span class="badge badge-danger badge-counter">7</span>
+                                <!-- <span class="badge badge-danger badge-counter">7</span> -->
                             </a>
                             <!-- Menú desplegable - Mensajes -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -417,14 +381,6 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Configuraciones
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Registro de Actividades
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -437,7 +393,7 @@
 
                 </nav>
                 <!-- Fin de la barra superior -->
-
+                
                 <!-- Contenido de la página de inicio -->
                 <div class="container-fluid">
 
