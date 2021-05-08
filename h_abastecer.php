@@ -399,10 +399,41 @@
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">El Historial de los Abastecimientos</h1>
-
-
                     <!-- AQUÍ VA TOD0 EL PHP -->
+                    <?php
+                      require 'conexion/conexion.php';
+                      $sql = "SELECT * FROM sell INNER JOIN user ON sell.user_id = user.iduser WHERE opetype_id = 2";
+                      $result = $con->query( $sql );
 
+                      // $datos = $result->fetch_assoc();
+
+                      echo "<div class='table-responsive'>
+                          <table class='table table-hover table-striped table-bordered table-sm'>
+                          <thead>
+                            <tr>
+                              <th> Nombre </th>
+                              <th> Precio </th>
+                              <th> Cantidad </th>
+                              <th> Tipo de unidad </th>
+                              <th> Categoria </th>
+                              <th> Categoria </th>
+
+                            </tr>
+                          </thead>
+                          <tbody>";
+                          while ($datos = $result->fetch_assoc()) {
+                                  echo "<tr>";
+                                  echo "<td>". $datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
+                                  echo "<td>". $datos['opetype_id'] ."</td>";
+                                  echo "<td>$ ". number_format($datos['cash']) ."</td>";
+                                  echo "<td>". $datos['disc'] ."</td>";
+                                  echo "<td>". $datos['date'] ."</td>";
+                                  echo "<td>". $datos['total'] ."</td>";
+
+    echo "</tr>";
+  }
+  echo "</tbody></table></div>";
+?>
 
                 </div>
                 <!-- /.container-fluid -->
