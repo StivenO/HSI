@@ -428,9 +428,9 @@
                                   echo "<td>". $datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
                                   echo "<td>". $datos['opetype_id'] ."</td>";
                                   echo "<td>$ ". number_format($datos['cash']) ."</td>";
-                                  echo "<td>". $datos['disc'] ."</td>";
+                                  echo "<td>$ ". number_format($datos['disc']) ."</td>";
                                   echo "<td>". $datos['date'] ."</td>";
-                                  echo "<td>". $datos['total'] ."</td>";
+                                  echo "<td>$ ". number_format($datos['total']) ."</td>";
 
     echo "</tr>";
   }
