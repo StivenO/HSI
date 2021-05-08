@@ -448,7 +448,7 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require 'conexion/conexion.php';
-                      $sql = "SELECT * FROM person WHERE ptype_id = '1'";
+                      $sql = "SELECT * FROM person INNER JOIN typeid ON person.typeid_id = typeid.idtypeid AND person.ptype_id = '2'";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -470,7 +470,7 @@
                           <tbody>";
                           while ($datos = $result->fetch_assoc()) {
                                   echo "<tr>";
-                                  echo "<td>". $datos['typeid_id'] ."</td>";
+                                  echo "<td>". $datos['nomtypeid'] ."</td>";
                                   echo "<td>". $datos['numid'] ."</td>";
                                   echo "<td>". $datos['nomperson'] ."</td>";
                                   echo "<td>". $datos['apeperson'] ."</td>";
