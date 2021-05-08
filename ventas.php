@@ -404,7 +404,10 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require 'conexion/conexion.php';
-                      $sql = "SELECT * FROM sell INNER JOIN person ON sell.person_id = person.idperson WHERE user_id =".$_SESSION['id'];
+                      $sql = "SELECT * FROM sell
+                      INNER JOIN person ON sell.person_id = person.idperson
+                      INNER JOIN user ON sell.user_id = user.iduser
+                      WHERE user_id =".$_SESSION['id']. " AND opetype_id ='2'";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -413,20 +416,20 @@
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
                             <tr>
-                              <th> Nombre </th>
+                              <th> Nombre del Encargado </th>
+                              <th> Nombre del Comprador </th>
                               <th> Precio </th>
-                              <th> Cantidad </th>
-                              <th> Tipo de unidad </th>
-                              <th> Categoria </th>
-                              <th> Categoria </th>
+                              <th> Descuento </th>
+                              <th> Fecha y Hora </th>
+                              <th> Total </th>
 
                             </tr>
                           </thead>
                           <tbody>";
                           while ($datos = $result->fetch_assoc()) {
                                   echo "<tr>";
+                                  echo "<td>". $datos['nomuser'] ." ".$datos['apeuser'] ."</td>";
                                   echo "<td>". $datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
-                                  echo "<td>". $datos['opetype_id'] ."</td>";
                                   echo "<td>$ ". number_format($datos['cash']) ."</td>";
                                   echo "<td>$ ". number_format($datos['disc']) ."</td>";
                                   echo "<td>". $datos['date'] ."</td>";
