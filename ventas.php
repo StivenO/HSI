@@ -414,12 +414,14 @@
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
                             <tr>
+
                               <th> Nombre del Encargado </th>
                               <th> Nombre del Comprador </th>
                               <th> Precio </th>
                               <th> Descuento </th>
                               <th> Fecha y Hora </th>
                               <th> Total </th>
+
                             </tr>
                           </thead>
                           <tbody>";
