@@ -2,7 +2,7 @@
 
 	require '../conexion/conexion.php';
 
-	$typeid_id = '1';
+	$tipoid = $_POST['tipoid'];
 	$numid = $_POST['numid'];
 	$nomperson = $_POST['nomperson'];
 	$apeperson = $_POST['apeperson'];
@@ -10,7 +10,7 @@
 	$phone = $_POST['phone'];
 
 	$sql = "INSERT INTO person
-				VALUES(null, '1', '$numid', '$nomperson', '$apeperson', '$address', '$phone', '1', null)";
+				VALUES(null, $tipoid, '$numid', '$nomperson', '$apeperson', '$address', '$phone', '1', null)";
 
 	$result = $con->query( $sql );
 

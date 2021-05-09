@@ -419,7 +419,7 @@
 															<div class="card-body">
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-                                        <select name="Tipoid" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
+                                        <select name="tipoid" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
                                           <option value="" disabled selected>Selecione...</option>
                                             <?php
                                             while ($typeid = $result->fetch_assoc() ) {
