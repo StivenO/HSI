@@ -8,7 +8,6 @@
 	$apeperson = $_POST['apeperson'];
 	$address = $_POST['address'];
 	$phone = $_POST['phone'];
-	$ptype_id = '1';
 
 	$sql = "INSERT INTO person
 				VALUES(null, '1', '$numid', '$nomperson', '$apeperson', '$address', '$phone', '1', null)";

@@ -401,7 +401,11 @@
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Agregar un Cliente</h1>
-
+                    <?php
+                    require '../conexion/conexion.php';
+                          $sql = "SELECT * FROM typeid";
+                          $result = $con->query( $sql );
+                      ?>
 										<form action="guardar.php" method="post" class="user">
 
 											<!-- Fila de columna -->
@@ -416,9 +420,12 @@
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
                                         <select name="Tipoid" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
-                                            <option selected="true" disabled="disabled" value="value1">Tipo de identificación</option>
-                                            <option value="value2">Value 2</option>
-                                            <option value="value3">Value 3</option>
+                                          <option value="" disabled selected>Selecione...</option>
+                                            <?php
+                                            while ($typeid = $result->fetch_assoc() ) {
+                                              echo "<option value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                            }
+                                            ?>
                                           </select>
 																		</div>
 																		<div class="col-sm-4">
