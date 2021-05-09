@@ -405,8 +405,7 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require 'conexion/conexion.php';
-                      $sql = "SELECT * FROM sell
-                      INNER JOIN person ON sell.person_id = person.idperson INNER JOIN user ON sell.user_id = user.iduser WHERE user_id =".$_SESSION['id']. " AND opetype_id ='2'";
+                      $sql = "SELECT * FROM datail INNER JOIN sell ON datail.sell_id = sell.idsell INNER JOIN user ON sell.user_id = user.iduser INNER JOIN product ON datail.product_id = product.idproduct INNER JOIN person ON sell.user_id = person.idperson WHERE opetype_id ='1'";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -418,7 +417,9 @@
 
                               <th> Nombre del Encargado </th>
                               <th> Nombre del Comprador </th>
-                              <th> Precio </th>
+                              <th> Nombre del Producto </th>
+                              <th> Cantidad </th>
+                              <th> Precio unidad </th>
                               <th> Descuento </th>
                               <th> Fecha y Hora </th>
                               <th> Total </th>
@@ -430,6 +431,8 @@
                                   echo "<tr>";
                                   echo "<td>". $datos['nomuser'] ." ".$datos['apeuser'] ."</td>";
                                   echo "<td>". $datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
+                                  echo "<td>". $datos['nomproduct'] ."</td>";
+                                  echo "<td>". $datos['cantrecord'] ."</td>";
                                   echo "<td>$ ". number_format($datos['cash']) ."</td>";
                                   echo "<td>$ ". number_format($datos['disc']) ."</td>";
                                   echo "<td>". $datos['date'] ."</td>";
