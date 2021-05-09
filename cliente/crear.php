@@ -402,7 +402,7 @@
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Agregar un Cliente</h1>
 
-										<form class="user">
+										<form action="guardar.php" method="post" class="user">
 
 											<!-- Fila de columna -->
 											<div class="col-lg-6 mb-4">
@@ -422,32 +422,34 @@
                                           </select>
 																		</div>
 																		<div class="col-sm-4">
-                                        <input type="text" class="form-control form-control-user" id="ejemploNumid"
+                                        <input name="numid" type="number" class="form-control form-control-user" id="ejemploNumid"
                                             placeholder="Número de identificación">
 																		</div>
                                     <div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploNomperson"
+																				<input name="nomperson" type="text" class="form-control form-control-user" id="ejemploNomperson"
 																						placeholder="Nombre...">
 																		</div>
 																</div>
                                 <div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="ejemploApeperson"
+																				<input name="apeperson" type="text" class="form-control form-control-user" id="ejemploApeperson"
 																						placeholder="Apellido...">
 																		</div>
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="ejemploAddress"
+																				<input name="address" type="text" class="form-control form-control-user" id="ejemploAddress"
 																						placeholder="Dirección">
 																		</div>
                                     <div class="col-sm-4">
-																				<input type="number" class="form-control form-control-user" id="ejemploPhone"
+																				<input name="phone" type="tel" class="form-control form-control-user" id="ejemploPhone"
 																						placeholder="Número de contacto">
 																		</div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-  																			<a href="../clientes.php" class="btn btn-primary btn-user btn-block"><i class="fas fa-plus"></i> Crear Cliente</a>
-  																	</div>
+                                      <input type="submit" name="" value="">
+  																			<a class="btn btn-primary btn-user btn-block"><i class="fas fa-plus"></i> Crear Cliente</a>
+                                      </input>
+                                    </div>
 																</div>
 
 														</form>
