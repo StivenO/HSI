@@ -405,7 +405,7 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                       require 'conexion/conexion.php';
-                      $sql = "SELECT * FROM datail INNER JOIN sell ON datail.sell_id = sell.idsell INNER JOIN user ON sell.user_id = user.iduser INNER JOIN product ON datail.product_id = product.idproduct INNER JOIN person ON sell.user_id = person.idperson WHERE opetype_id ='2'";
+                      $sql = "SELECT * FROM datail INNER JOIN sell ON datail.sell_id = sell.idsell INNER JOIN user ON sell.user_id = user.iduser INNER JOIN product ON datail.product_id = product.idproduct INNER JOIN person ON sell.user_id = person.idperson WHERE opetype_id ='1'";
                       $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
@@ -419,7 +419,7 @@
                               <th> Nombre del Comprador </th>
                               <th> Nombre del Producto </th>
                               <th> Cantidad </th>
-                              <th> Precio </th>
+                              <th> Precio unidad </th>
                               <th> Descuento </th>
                               <th> Fecha y Hora </th>
                               <th> Total </th>

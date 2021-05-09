@@ -405,7 +405,9 @@
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
                     require 'conexion/conexion.php';
-                    $sql = "SELECT * FROM sell INNER JOIN user ON sell.user_id = user.iduser INNER JOIN person ON sell.person_id = person.idperson WHERE opetype_id = 2";
+                    $sql = "SELECT * FROM datail INNER JOIN sell ON datail.sell_id = sell.idsell INNER JOIN user ON sell.user_id = user.iduser INNER JOIN product ON datail.product_id = product.idproduct INNER JOIN person ON sell.user_id = person.idperson WHERE opetype_id ='2'";
+
+                    //$sql = "SELECT * FROM sell INNER JOIN user ON sell.user_id = user.iduser INNER JOIN person ON sell.person_id = person.idperson WHERE opetype_id = 2";
                     $result = $con->query( $sql );
 
                       // $datos = $result->fetch_assoc();
