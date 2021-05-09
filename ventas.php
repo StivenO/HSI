@@ -414,22 +414,12 @@
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
                             <tr>
-<<<<<<< HEAD
-                              <th>Cliente</th>
-                              <th>Operación</th>
-                              <th>Efectivo</th>
-                              <th>Descuento</th>
-                              <th>Fecha y Hora</th>
-                              <th>Total</th>
-=======
                               <th> Nombre del Encargado </th>
                               <th> Nombre del Comprador </th>
                               <th> Precio </th>
                               <th> Descuento </th>
                               <th> Fecha y Hora </th>
                               <th> Total </th>
->>>>>>> ef6bc68cf6797304dc214d25cd08a795cd81f049
-
                             </tr>
                           </thead>
                           <tbody>";
