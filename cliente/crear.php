@@ -423,23 +423,8 @@
                                           <option value="" disabled selected>Selecione...</option>
                                             <?php
                                             while ($typeid = $result->fetch_assoc() ) {
-                                              echo "<option value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
-                                            }
-                                            ?>
-                                          </select>
-																		</div>
-																		<div class="col-sm-4">
-                                        <input name="numid" type="number" class="form-control form-control-user" id="ejemploNumid"
-                                            placeholder="Número de identificación">
-																		</div>
-                                    <div class="col-sm-4">
-																				<input name="nomperson" type="text" class="form-control form-control-user" id="ejemploNomperson"
-																						placeholder="Nombre...">
-																		</div>
-																</div>
-                                <div class="form-group row">
-																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<input name="apeperson" type="text" class="form-control form-control-user" id="ejemploApeperson"
+                                              ec
+                                              name="apeperson" type="text" class="form-control form-control-user" id="ejemploApeperson"
 																						placeholder="Apellido...">
 																		</div>
                                     <div class="col-sm-4 mb-3 mb-sm-0">
@@ -454,7 +439,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
 
-  																			<input type="submit" name="" value="Crear Cliente" class="btn btn-primary btn-user btn-block"></input>
+  																			<a class="btn btn-primary btn-user btn-block" type="submit" name="" value=""><i class="fas fa-plus"></i> Crear Cliente</a>
 
                                     </div>
 																</div>
