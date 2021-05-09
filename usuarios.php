@@ -422,7 +422,7 @@
                     						<th>No. ID</th>
                     				  	<th>Nombre</th>
                     				  	<th>Apellido</th>
-                    				  	<th style='width:250px'>Correo Electronico</th>
+                    				  	<th style='width:250px'>Correo Electrónico</th>
                     				  	<th>Nick</th>
                     				  	<th>Estado</th>
                     				  	<th>Rol</th>

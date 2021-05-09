@@ -398,8 +398,8 @@
                 <div class="container-fluid">
 
                     <!-- Encabezado de página -->
-                    <h1 class="h3 mb-4 text-gray-800">Detalle existencia en Caja</h1>
-                    <br>
+                    <h1 class="h3 mb-4 text-gray-800">Detalle existencia en Caja:</h1>
+                    <hr><br>
 
                     <!-- Fila de contenido -->
                     <div class="row">
@@ -467,7 +467,7 @@
 
             </div>
             <!-- Fin del contenido principal -->
-            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <!-- Pie de página -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">

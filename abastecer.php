@@ -398,7 +398,7 @@
                 <div class="container-fluid">
 
                     <!-- Encabezado de página -->
-                    <h1 class="h3 mb-4 text-gray-800">Página de abastecimiento (Posible CRUD)</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Abastecimiento</h1>
 
                     <!-- AQUÍ VA TOD0 EL PHP -->
                     <?php
@@ -411,16 +411,17 @@
                       echo "<div class='table-responsive'>
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
-                            <tr>
-                              <th> Nombre </th>
-                              <th> Description </th>
-                              <th> Precio de comprar </th>
-                              <th> Precio de venta </th>
-                              <th> Stock minimo </th>
-                              <th> Cantidad </th>
-                              <th> Tipo de unidad </th>
-                              <th> Categoria </th>
-                              <th style='width:200px' > Accion </th>
+                            <tr class='text-center'>
+                              <th>Nombre</th>
+                              <th>Descripción</th>
+                              <th>Precio compra</th>
+                              <th>Precio venta</th>
+                              <th>Stock mínimo</th>
+                              <th>Cantidad</th>
+                              <th>Tipo de unidad</th>
+                              <th>Categoría</th>
+                              <th style='width:100px' >Nueva</th>
+                              <th style='width:120px' >Acción</th>
                             </tr>
                           </thead>
                           <tbody>";
@@ -428,16 +429,17 @@
                                   echo "<tr>";
                                   echo "<td>". $datos['nomproduct'] ."</td>";
                                   echo "<td>". $datos['description'] ."</td>";
-                                  echo "<td>". $datos['pricein'] ."</td>";
-                                  echo "<td>". $datos['priceout'] ."</td>";
+                                  echo "<td>$ ". number_format($datos['pricein']) ."</td>";
+                                  echo "<td>$ ". number_format($datos['priceout']) ."</td>";
                                   echo "<td>". $datos['stockmin'] ."</td>";
                                   echo "<td>". $datos['quantity'] ."</td>";
                                   echo "<td>". $datos['nomunit'] ."</td>";
                                   echo "<td>". $datos['nomcategory'] ."</td>";
                         echo "<td>
-        <a href='abastecer/editar.php?idproduct={$datos['idproduct']}' class='btn btn-warning'> Editar </a>
-        <a href='abastecer/eliminar.php?idproduct={$datos['idproduct']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> Eliminar</a>
-       </td>";
+              <input type='text' class='form-control form-control-user' id='ejemploAgregar' placeholder='Cantidad'>
+              <td>
+              <a href='abastecer.php' class='btn btn-primary btn-user btn-block'><i class='fas fa-cart-plus'></i> Agregar</a> </td>
+        </td>";
 
     echo "</tr>";
   }

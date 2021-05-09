@@ -419,10 +419,10 @@
                               <th>No. ID</th>
                               <th>Nombre</th>
                               <th>Apellido</th>
-                              <th>Dirección</th>
-                              <th>Telefono</th>
-                              <th style='width:250px'>Correo Electronico</th>
-                    <th> ACCIONES </th>
+                              <th style='width:150px'>Dirección</th>
+                              <th>Teléfono</th>
+                              <th style='width:200px'>Correo Electrónico</th>
+                              <th style='width:110px'>Acción</th>
                             </tr>
                           </thead>
                           <tbody>";

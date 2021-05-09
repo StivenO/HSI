@@ -416,12 +416,12 @@
                           <thead>
                             <tr class='text-center'>
                               <th>Nombre</th>
-                              <th>Description</th>
+                              <th style='width:400px'>Descripción</th>
                               <th>Precio</th>
                               <th>Cantidad</th>
                               <th>Tipo de unidad</th>
-                              <th>Categoria </th>
-                              <th style='width:200px' >Accion</th>
+                              <th>Categoría </th>
+                              <th style='width:110px' >Acción</th>
                             </tr>
                           </thead>
                           <tbody>";
@@ -429,8 +429,8 @@
                                   echo "<tr>";
                                   echo "<td>". $datos['nomproduct'] ."</td>";
                                   echo "<td>". $datos['description'] ."</td>";
-                                  echo "<td>". $datos['priceout'] ."</td>";
-                                  echo "<td>". $datos['quantity'] ."</td>";
+                                  echo "<td style='text-align:right'>$ ". number_format($datos['priceout']) ."</td>";
+                                  echo "<td style='text-align:right'>". $datos['quantity'] ."</td>";
                                   echo "<td>". $datos['nomunit'] ."</td>";
                                   echo "<td>". $datos['nomcategory'] ."</td>";
 
