@@ -402,53 +402,102 @@
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Editar un Cliente</h1>
 
-										<form class="user">
+
+
+
+
+                    <?php
+                  		require '../conexion/conexion.php';
+
+                  		$idperson = $_GET['idperson'];
+                  		$sql = "SELECT * FROM person WHERE idperson = $idperson";
+                  		$result = $con->query( $sql );
+                  		$persona = $result->fetch_assoc();
+
+                      $sql = "SELECT * FROM typeid";
+                      $result = $con->query( $sql );
+
+                  		if ($_POST) {
+                        $typeid_id = $_POST['typeid_id'];
+                        $nom = $_POST['numid'];
+                        $nom = $_POST['nomperson'];
+                        $ape = $_POST['apeperson'];
+                        $address = $_POST['address'];
+                        $phone = $_POST['phone'];
+
+
+                  			$sql = "UPDATE person
+                  					SET typeid_id = '$typeid_id', nomperson = '$nomperson', apeperson = '$apeperson', address = '$address', phone = '$phone'
+                  					WHERE idperson = $idperson";
+
+                  			$result = $con->query($sql);
+
+                  			if ($result)
+                  				header('location: ../clientes.php');
+                  			else
+                  				echo "Error!!!..." . $con->error;
+
+                  		}
+
+                  	?>
+
+                    <form method="post" class="user">
 
 											<!-- Fila de columna -->
 											<div class="col-lg-6 mb-4">
 
-                        <!-- Formulario -->
-                        <div class="card shadow mb-4" style="width: 60rem;">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary text-center">Formulario para editar Clientes</h6>
-                            </div>
-                            <div class="card-body">
-                              <div class="form-group row">
-                                  <div class="col-sm-4 mb-3 mb-sm-0">
-                                      <select name="Tipoid" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
-                                          <option selected="true" disabled="disabled" value="value1">Tipo de identificación</option>
-                                          <option value="value2">Value 2</option>
-                                          <option value="value3">Value 3</option>
-                                        </select>
-                                  </div>
-                                  <div class="col-sm-4">
-                                      <input type="text" class="form-control form-control-user" id="ejemploNumid"
-                                          placeholder="Número de identificación">
-                                  </div>
-                                  <div class="col-sm-4">
-                                      <input type="text" class="form-control form-control-user" id="ejemploNomperson"
-                                          placeholder="Nombre...">
-                                  </div>
-                              </div>
-                              <div class="form-group row">
-                                  <div class="col-sm-4 mb-3 mb-sm-0">
-                                      <input type="text" class="form-control form-control-user" id="ejemploApeperson"
-                                          placeholder="Apellido...">
-                                  </div>
-                                  <div class="col-sm-4 mb-3 mb-sm-0">
-                                      <input type="text" class="form-control form-control-user" id="ejemploAddress"
-                                          placeholder="Dirección">
-                                  </div>
-                                  <div class="col-sm-4">
-                                      <input type="number" class="form-control form-control-user" id="ejemploPhone"
-                                          placeholder="Número de contacto">
-                                  </div>
-                              </div>
-                              <div class="form-group row">
-                                  <div class="col-sm-4 mb-3 mb-sm-0">
-                                      <a href="../clientes.php" class="btn btn-primary btn-user btn-block"><i class="fas fa-plus"></i> Editar Cliente</a>
-                                  </div>
-                              </div>
+													<!-- Formulario -->
+													<div class="card shadow mb-4" style="width: 60rem;">
+															<div class="card-header py-3">
+																	<h6 class="m-0 font-weight-bold text-primary text-center">Formulario para Clientes</h6>
+															</div>
+															<div class="card-body">
+																<div class="form-group row">
+																		<div class="col-sm-4 mb-3 mb-sm-0">
+                                        <select name="typeid_id" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
+                                          <option value="" disabled selected>Selecione...</option>
+                                          <?php
+                                              while ($typeid = $result->fetch_assoc() ) {
+                                                if( $typeid['idtypeid'] == $persona['typeid_id'])
+                                                  echo "<option selected value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                                else
+                                                  echo "<option value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                              }
+                                              ?>
+                                          </select>
+																		</div>
+																		<div class="col-sm-4">
+                                        <input name="numid" type="number" class="form-control form-control-user" id="ejemploNumid"
+                                            placeholder="Número de identificación" value="<?= $persona['numid'] ?>">
+																		</div>
+                                    <div class="col-sm-4">
+																				<input name="nomperson" type="text" class="form-control form-control-user" id="ejemploNomperson"
+																						placeholder="Nombre..." value="<?= $persona['nomperson'] ?>">
+																		</div>
+																</div>
+                                <div class="form-group row">
+																		<div class="col-sm-4 mb-3 mb-sm-0">
+																				<input name="apeperson" type="text" class="form-control form-control-user" id="ejemploApeperson"
+																						placeholder="Apellido..." value="<?= $persona['apeperson'] ?>">
+																		</div>
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+																				<input name="address" type="text" class="form-control form-control-user" id="ejemploAddress"
+																						placeholder="Dirección" value="<?= $persona['address'] ?>">
+																		</div>
+                                    <div class="col-sm-4">
+																				<input name="phone" type="tel" class="form-control form-control-user" id="ejemploPhone"
+																						placeholder="Número de contacto" value="<?= $persona['phone'] ?>">
+																		</div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+
+  																			<a class="btn btn-primary btn-user btn-block"><input type="submit" name="" value=""><i class="fas fa-plus"></i> Crear Cliente</a></input>
+
+                                    </div>
+																</div>
+
+														</form>
                             </div>
                         </div>
 
