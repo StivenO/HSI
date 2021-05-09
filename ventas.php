@@ -413,16 +413,16 @@
                       echo "<div class='table-responsive'>
                           <table class='table table-hover table-striped table-bordered table-sm'>
                           <thead>
-                            <tr>
+                            <tr class='text-center'>
 
-                              <th> Nombre del Encargado </th>
-                              <th> Nombre del Comprador </th>
-                              <th> Nombre del Producto </th>
-                              <th> Cantidad </th>
-                              <th> Precio unidad </th>
-                              <th> Descuento </th>
-                              <th> Fecha y Hora </th>
-                              <th> Total </th>
+                              <th>Nombre Usuario</th>
+                              <th>Nombre Cliente</th>
+                              <th>Nombre Producto</th>
+                              <th>Cantidad </th>
+                              <th>Precio unidad</th>
+                              <th>Descuento</th>
+                              <th>Fecha y Hora</th>
+                              <th>Total</th>
 
                             </tr>
                           </thead>
@@ -432,11 +432,11 @@
                                   echo "<td>". $datos['nomuser'] ." ".$datos['apeuser'] ."</td>";
                                   echo "<td>". $datos['nomperson'] ." ".$datos['apeperson'] ."</td>";
                                   echo "<td>". $datos['nomproduct'] ."</td>";
-                                  echo "<td>". $datos['cantrecord'] ."</td>";
-                                  echo "<td>$ ". number_format($datos['cash']) ."</td>";
-                                  echo "<td>$ ". number_format($datos['disc']) ."</td>";
+                                  echo "<td style='text-align:right;'>". $datos['cantrecord'] ."</td>";
+                                  echo "<td style='text-align:right;'>$ ". number_format($datos['cash']) ."</td>";
+                                  echo "<td style='text-align:right;'>$ ". number_format($datos['disc']) ."</td>";
                                   echo "<td>". $datos['date'] ."</td>";
-                                  echo "<td>$ ". number_format($datos['total']) ."</td>";
+                                  echo "<td style='text-align:right;'>$ ". number_format($datos['total']) ."</td>";
 
     echo "</tr>";
   }

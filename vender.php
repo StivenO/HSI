@@ -397,12 +397,71 @@
                 <!-- Contenido de la página de inicio -->
                 <div class="container-fluid">
 
+                    <a href="index.php" class="btn btn-danger float-right"><i class="fas fa-window-close"></i> Cancelar</a>
+
                     <!-- Encabezado de página -->
-                    <h1 class="h3 mb-4 text-gray-800">Página donde se hacen las Ventas</h1>
-                    <!-- AQUÍ VA TOD0 EL PHP -->
+                    <h1 class="h3 mb-4 text-gray-800">Hacer una Venta</h1>
+
+                    <form class="user">
+
+                      <!-- Fila de columna -->
+                      <div class="col-lg-6 mb-4">
+
+                          <!-- Formulario -->
+                          <div class="card shadow mb-4" style="width: 60rem;">
+                              <div class="card-header py-3">
+                                  <h6 class="m-0 font-weight-bold text-primary text-center">Realiza la venta</h6>
+                              </div>
+                              <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                      <input type="text" class="form-control form-control-user" id="ejemploNomuser"
+                                          placeholder="Nombre del usuario">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control form-control-user" id="ejemploNomperson"
+                                            placeholder="Nombre del cliente">
+                                    </div>
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                      <input type="text" class="form-control form-control-user" id="ejemploNomproduct"
+                                          placeholder="Nombre del producto">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <input type="number" class="form-control form-control-user" id="ejemploCant"
+                                            placeholder="Cantidad">
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <input type="number" class="form-control form-control-user" id="ejemploPriceout"
+                                          placeholder="Precio unitario">
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <input type="number" class="form-control form-control-user" id="ejemploDesc"
+                                          placeholder="Descuento">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                      <input type="date" class="form-control form-control-user" id="ejemplodate"
+                                          placeholder="Fecha y hora">
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <input type="number" class="form-control form-control-user" id="ejemplototal"
+                                          placeholder="Total">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a class="btn btn-success btn-user btn-block" href="#" data-toggle="modal" data-target="#logoutModal2"><i class="fas fa-dollar-sign"></i></i> Confirmar Venta</a>
+                                    </div>
+                                </div>
+
+                            </form>
+                              </div>
+                          </div>
 
 
-                    <!-- AQUÍ VA TOD0 EL PHP -->
+                      </div>
+
 
                 </div>
                 <!-- /.container-fluid -->
@@ -446,6 +505,24 @@
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                     <a class="btn btn-primary" href="salir.php">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="logoutModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Se ha confirmado la Venta!</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">La venta se realizó correctamente, puede continuar sin problemas.</div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" href="vender.php">Confirmar</a>
                 </div>
             </div>
         </div>

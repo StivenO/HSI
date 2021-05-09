@@ -429,10 +429,10 @@
                                   echo "<tr>";
                                   echo "<td>". $datos['nomproduct'] ."</td>";
                                   echo "<td>". $datos['description'] ."</td>";
-                                  echo "<td>$ ". number_format($datos['pricein']) ."</td>";
-                                  echo "<td>$ ". number_format($datos['priceout']) ."</td>";
-                                  echo "<td>". $datos['stockmin'] ."</td>";
-                                  echo "<td>". $datos['quantity'] ."</td>";
+                                  echo "<td style='text-align:right;'>$ ". number_format($datos['pricein']) ."</td>";
+                                  echo "<td style='text-align:right;'>$ ". number_format($datos['priceout']) ."</td>";
+                                  echo "<td style='text-align:right;'>". $datos['stockmin'] ."</td>";
+                                  echo "<td style='text-align:right;'>". $datos['quantity'] ."</td>";
                                   echo "<td>". $datos['nomunit'] ."</td>";
                                   echo "<td>". $datos['nomcategory'] ."</td>";
                         echo "<td>
