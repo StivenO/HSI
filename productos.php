@@ -421,7 +421,7 @@
                               <th>Cantidad</th>
                               <th>Tipo de unidad</th>
                               <th>Categoría </th>
-                              <th style='width:110px' >Acción</th>
+                              <th style='width:110px'>Acción</th>
                             </tr>
                           </thead>
                           <tbody>";
