@@ -410,7 +410,7 @@
                         <!-- Formulario -->
                         <div class="card shadow mb-4" style="width: 60rem;">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary text-center">Formulario para editar Proveedores</h6>
+                                <h6 class="m-0 font-weight-bold text-primary text-center">Formulario para editar un Proveedor</h6>
                             </div>
                             <div class="card-body">
                               <div class="form-group row">
@@ -448,7 +448,7 @@
                                           placeholder="Correo Electrónico">
                                   </div>
                                   <div class="col-sm-3">
-                                      <a href="../proveedores.php" class="btn btn-primary btn-user btn-block"><i class="fas fa-plus"></i> Editar Proveedor</a>
+                                      <input type="submit" name="" value="Editar Proveedor" class="btn btn-primary btn-user btn-block"></input>
                                   </div>
                               </div>
 

@@ -454,7 +454,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
 
-  																			<a class="btn btn-primary btn-user btn-block"><input type="submit" name="" value=""><i class="fas fa-plus"></i> Crear Cliente</input></a>
+  																			<input type="submit" name="" value="Crear Cliente" class="btn btn-primary btn-user btn-block"></input>
 
                                     </div>
 																</div>

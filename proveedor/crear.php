@@ -448,7 +448,7 @@
 																						placeholder="Correo Electrónico">
 																		</div>
                                     <div class="col-sm-3">
-  																			<a href="../proveedores.php" class="btn btn-primary btn-user btn-block"><i class="fas fa-plus"></i> Crear Proveedor</a>
+  																			<input type="submit" name="" value="Crear Proveedor" class="btn btn-primary btn-user btn-block"></input>
   																	</div>
 																</div>
 

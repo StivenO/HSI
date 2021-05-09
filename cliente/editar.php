@@ -449,7 +449,7 @@
 													<!-- Formulario -->
 													<div class="card shadow mb-4" style="width: 60rem;">
 															<div class="card-header py-3">
-																	<h6 class="m-0 font-weight-bold text-primary text-center">Formulario para Clientes</h6>
+																	<h6 class="m-0 font-weight-bold text-primary text-center">Formulario para editar un Cliente</h6>
 															</div>
 															<div class="card-body">
 																<div class="form-group row">
@@ -492,7 +492,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
 
-  																			<a class="btn btn-primary btn-user btn-block"><input type="submit" name="" value=""><i class="fas fa-plus"></i> Crear Cliente</a></input>
+  																			<input type="submit" name="" value="Editar Cliente" class="btn btn-primary btn-user btn-block"></input>
 
                                     </div>
 																</div>

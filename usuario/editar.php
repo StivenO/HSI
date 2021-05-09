@@ -410,7 +410,7 @@
 													<!-- Espacio de alertas Stock Mínimo -->
 													<div class="card shadow mb-4" style="width: 60rem;">
 															<div class="card-header py-3">
-																	<h6 class="m-0 font-weight-bold text-primary text-center">Formulario para editar Usuarios</h6>
+																	<h6 class="m-0 font-weight-bold text-primary text-center">Formulario para editar un Usuario</h6>
 															</div>
 															<div class="card-body">
 																<div class="form-group row">
@@ -463,7 +463,7 @@
 																</div>
 																<div class="form-group row">
 																	<div class="col-sm-3">
-																			<a href="../usuarios.php" class="btn btn-primary btn-user btn-block"><i class="fas fa-user-edit"></i> Editar Usuario</a>
+																			<input type="submit" name="" value="Editar Usuario" class="btn btn-primary btn-user btn-block"></input>
 																	</div>
 
 																</div>

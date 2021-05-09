@@ -459,7 +459,7 @@
                                           </select>
                                   </div><br><br><br>
                                         <div class="col-sm-4 mb-3 mb-sm-0">
-                                            <a href="../productos.php" class="btn btn-primary btn-user btn-block"><i class="fas fa-plus"></i> Editar Producto</a>
+                                            <input type="submit" name="" value="Editar Producto" class="btn btn-primary btn-user btn-block"></input>
                                         </div>
                               </div>
 

@@ -463,7 +463,7 @@
 																</div>
 																<div class="form-group row">
 																	<div class="col-sm-3">
-																			<a href="../usuarios.php" class="btn btn-primary btn-user btn-block"><i class="fas fa-plus"></i> Crear Usuario</a>
+																			<input type="submit" name="" value="Crear Usuario" class="btn btn-primary btn-user btn-block"></input>
 																	</div>
 
 																</div>
