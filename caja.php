@@ -462,6 +462,8 @@
                                                 Total</div>
                                                 <?php
                                                 $suma = 0;
+                                                $vventas = $datos['sumventas'];
+                                                $vcompras = $datos['sumcompras'];
                                                   $suma = $vventas-$vcompras;
                                                  ?>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo "".$suma.""?></div>
