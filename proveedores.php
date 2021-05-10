@@ -437,8 +437,8 @@
                                   echo "<td>". $datos['emailperson'] ."</td>";
 
                         echo "<td>
-                        <a href='proveedor/editar.php?iduser={$datos['idperson']}' class='btn btn-info'> <i class='fas fa-edit ' style='size:5x'></i> </a>
-                        <a href='proveedor/eliminar.php?iduser={$datos['idperson']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> <i class='fas fa-trash-alt'></i> </a>
+                        <a href='proveedor/editar.php?idperson={$datos['idperson']}' class='btn btn-info'> <i class='fas fa-edit ' style='size:5x'></i> </a>
+                        <a href='proveedor/eliminar.php?idperson={$datos['idperson']}' onclick='return confirm(\"Está seguro de eliminar este registro?\")' class='btn btn-danger'> <i class='fas fa-trash-alt'></i> </a>
                        </td>";
 
     echo "</tr>";
