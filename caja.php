@@ -463,7 +463,6 @@
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Total</div>
                                                 <?php
-                                                $suma = 0;
                                                 $suma = $sumv - $sumc;
                                                  ?>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo " $". number_format($suma).""?></div>
