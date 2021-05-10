@@ -470,7 +470,7 @@
 																		</div>
 																		<div class="col-sm-4 mb-3 mb-sm-0">
 																				<select name="rol" class="form-control form-select-user text-gray-600" id="ejemploRol">
-																							<option selected="true" disabled="disabled" value="value1">Cargo o rol</option>
+																							<option selected="true" disabled="disabled" value="value1">	Administrador </option>
                                               <?php
                                                   while ($rol = $result->fetch_assoc() ) {
                                                     if( $rol['idrol'] == $persona['rol_id'])
