@@ -423,8 +423,23 @@
                                           <option value="" disabled selected>Selecione...</option>
                                             <?php
                                             while ($typeid = $result->fetch_assoc() ) {
-                                              ec
-                                              name="apeperson" type="text" class="form-control form-control-user" id="ejemploApeperson"
+                                              echo "<option value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                           }
+                                           ?>
+                                         </select>
+                                   </div>
+                                   <div class="col-sm-4">
+                                       <input name="numid" type="number" class="form-control form-control-user" id="ejemploNumid"
+                                           placeholder="Número de identificación">
+                                   </div>
+                                   <div class="col-sm-4">
+                                       <input name="nomperson" type="text" class="form-control form-control-user" id="ejemploNomperson"
+                                           placeholder="Nombre...">
+                                   </div>
+                               </div>
+                               <div class="form-group row">
+                                   <div class="col-sm-4 mb-3 mb-sm-0">
+                                       <input name="apeperson" type="text" class="form-control form-control-user" id="ejemploApeperson"
 																						placeholder="Apellido...">
 																		</div>
                                     <div class="col-sm-4 mb-3 mb-sm-0">
