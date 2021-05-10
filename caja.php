@@ -419,6 +419,7 @@
                                                   $datos = $result->fetch_assoc()
                                                   ?>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo " $". number_format($datos['sumventas']) ."  " ?></div>
+                                            <?php $sumv = $datos['sumventas']; ?>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-search-dollar fa-2x text-gray-300"></i>
@@ -443,6 +444,7 @@
                                                   $datos = $result->fetch_assoc()
                                                   ?>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo " $". number_format($datos['sumcompras']) ."  " ?></div>
+                                            <?php $sumc = $datos['sumcompras']; ?>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-funnel-dollar fa-2x text-gray-300"></i>
@@ -462,11 +464,9 @@
                                                 Total</div>
                                                 <?php
                                                 $suma = 0;
-                                                $vventas = $datos['sumventas'];
-                                                $vcompras = $datos['sumcompras'];
-                                                  $suma = $vventas-$vcompras;
+                                                $suma = $sumv - $sumc;
                                                  ?>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo "".$suma.""?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo " $". number_format($suma).""?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
