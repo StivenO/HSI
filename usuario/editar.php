@@ -401,6 +401,43 @@
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Editar un Usuario</h1>
+                    <?php
+                  		require '../conexion/conexion.php';
+
+                  		$iduser = $_GET['iduser'];
+                  		$sql = "SELECT * FROM user WHERE iduser = $iduser";
+                  		$result = $con->query( $sql );
+                  		$persona = $result->fetch_assoc();
+
+                      $sql = "SELECT * FROM typeid";
+                      $result = $con->query( $sql );
+
+                      $sql = "SELECT * FROM typeid";
+                      $result = $con->query( $sql );
+
+                  		if ($_POST) {
+                        $typeid_id = $_POST['typeid_id'];
+                        $nom = $_POST['numid'];
+                        $nom = $_POST['nomperson'];
+                        $ape = $_POST['apeperson'];
+                        $address = $_POST['address'];
+                        $phone = $_POST['phone'];
+
+
+                  			$sql = "UPDATE user
+                  					SET typeid_id = '$typeid_id', nomuser = '$nomuser', apeuser = '$apeuser', numid = '$numid', rol_id = '$rol_id'
+                  					WHERE iduser = $iduser";
+
+                  			$result = $con->query($sql);
+
+                  			if ($result)
+                  				header('location: ../clientes.php');
+                  			else
+                  				echo "Error!!!..." . $con->error;
+
+                  		}
+
+                  	?>
 
 										<form class="user">
 
@@ -417,48 +454,60 @@
 																		<div class="col-sm-4 mb-3 mb-sm-0">
 																				<select name="Tipoid" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
 																							<option selected="true" disabled="disabled" value="value1">Tipo de identificación</option>
-																							<option value="value2">Value 2</option>
-																							<option value="value3">Value 3</option>
+                                              <?php
+                                                  while ($typeid = $result->fetch_assoc() ) {
+                                                    if( $typeid['idtypeid'] == $persona['typeid_id'])
+                                                      echo "<option selected value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                                    else
+                                                      echo "<option value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                                  }
+                                                  ?>
 																				</select>
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploNumid"
-																						placeholder="Número de identificación">
+																						placeholder="Número de identificación" value="<?= $persona['numid'] ?>">
 																		</div>
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<select name="Tipoid" class="form-control form-select-user text-gray-600" id="ejemploRol">
-																							<option selected="true" disabled="disabled" value="value1">Cargo o rol</option>
-																							<option value="value2">Administrador</option>
-																							<option value="value3">Usuario</option>
+																				<select name="rol" class="form-control form-select-user text-gray-600" id="ejemploRol">
+																							<option selected="true" disabled="disabled" value="value1">	Administrador </option>
+                                              <?php
+                                                  while ($rol = $result->fetch_assoc() ) {
+                                                    if( $rol['idrol'] == $persona['rol_id'])
+                                                      echo "<option selected value='".$typeid['idrol']."'>".$typeid['nomrol']."</option>";
+                                                    else
+                                                      echo "<option value='".$typeid['idrol']."'>".$typeid['nomrol']."</option>";
+                                                  }
+                                                  ?>
 																				</select>
 																		</div>
 																</div>
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="ejemploNombre"
-																						placeholder="Nombre Completo">
+																				<input type="text" name=" " class="form-control form-control-user" id="ejemploNombre"
+																						placeholder="Nombre Completo" value="<?= $persona['nomuser'] ?>">
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploApellido"
-																						placeholder="Apellido Completo">
+																						placeholder="Apellido Completo" value="<?= $persona['nomuser'] ?>">
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploUsuario"
-																						placeholder="Usuario">
+																						placeholder="Usuario" value="<?= $persona['nick'] ?>">
 																		</div>
 																</div>
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
 																				<input type="text" class="form-control form-control-user" id="ejemploEmail"
-																						placeholder="Correo Electrónico">
+																						placeholder="Correo Electrónico" value="<?= $persona['emailuser'] ?>">
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploClave"
-																						placeholder="Contraseña">
+																						placeholder="Contraseña" value="<?= $persona['pass'] ?>">
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploRclave"
-																						placeholder="Repetir Contraseña">
+																						placeholder="Repetir Contraseña" value="<?= $persona['pass'] ?>">
 																		</div>
 																</div>
 																<div class="form-group row">

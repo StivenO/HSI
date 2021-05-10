@@ -402,7 +402,7 @@
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Agregar un Usuario</h1>
 
-										<form class="user">
+										<form action="guardar.php" method="post" class="user">
 
 											<!-- Fila de columna -->
 											<div class="col-lg-6 mb-4">
@@ -422,7 +422,7 @@
 																				</select>
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploNumid"
+																				<input type="text" class="form-control form-control-user" id="num"
 																						placeholder="Número de identificación">
 																		</div>
 																		<div class="col-sm-4 mb-3 mb-sm-0">
@@ -435,25 +435,25 @@
 																</div>
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="ejemploNombre"
+																				<input type="text" class="form-control form-control-user" id="nomuser"
 																						placeholder="Nombre Completo">
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploApellido"
+																				<input type="text" class="form-control form-control-user" id="apeuser"
 																						placeholder="Apellido Completo">
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploUsuario"
+																				<input type="text" class="form-control form-control-user" id="nick"
 																						placeholder="Usuario">
 																		</div>
 																</div>
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="ejemploEmail"
+																				<input type="text" class="form-control form-control-user" id="emailuser"
 																						placeholder="Correo Electrónico">
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploClave"
+																				<input type="text" class="form-control form-control-user" id="pass"
 																						placeholder="Contraseña">
 																		</div>
 																		<div class="col-sm-4">
