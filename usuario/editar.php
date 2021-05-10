@@ -469,14 +469,14 @@
 																						placeholder="Número de identificación" value="<?= $persona['numid'] ?>">
 																		</div>
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<select name="" class="form-control form-select-user text-gray-600" id="ejemploRol">
+																				<select name="rol" class="form-control form-select-user text-gray-600" id="ejemploRol">
 																							<option selected="true" disabled="disabled" value="value1">Cargo o rol</option>
                                               <?php
-                                                  while ($typeid = $result->fetch_assoc() ) {
-                                                    if( $typeid['idtypeid'] == $persona['typeid_id'])
-                                                      echo "<option selected value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                                  while ($rol = $result->fetch_assoc() ) {
+                                                    if( $rol['idrol'] == $persona['rol_id'])
+                                                      echo "<option selected value='".$typeid['idrol']."'>".$typeid['nomrol']."</option>";
                                                     else
-                                                      echo "<option value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                                      echo "<option value='".$typeid['idrol']."'>".$typeid['nomrol']."</option>";
                                                   }
                                                   ?>
 																				</select>
