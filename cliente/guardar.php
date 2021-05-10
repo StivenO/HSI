@@ -10,7 +10,7 @@
 	$phone = $_POST['phone'];
 
 	$sql = "INSERT INTO person
-				VALUES(null, $tipoid, '$numid', '$nomperson', '$apeperson', '$address', '$phone', '1', null)";
+				VALUES(null, '2', '$numid', '$nomperson', '$apeperson', '$address', '$phone', '1', null)";
 
 	$result = $con->query( $sql );
 

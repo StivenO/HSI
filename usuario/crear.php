@@ -429,11 +429,11 @@
 																				</select>
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="num"
+																				<input type="text" name="numid" class="form-control form-control-user" id="num"
 																						placeholder="Número de identificación">
 																		</div>
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<select name="Tipoid" class="form-control form-select-user text-gray-600" id="ejemploRol">
+																				<select name="rol_id" class="form-control form-select-user text-gray-600" id="ejemploRol">
 																							<option selected="true" disabled="disabled" value="value1">Cargo o rol</option>
 																							<option value="value2">Administrador</option>
 																							<option value="value3">Usuario</option>
@@ -442,29 +442,29 @@
 																</div>
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="nomuser"
+																				<input type="text" name="nomuser" class="form-control form-control-user" id="nomuser"
 																						placeholder="Nombre Completo">
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="apeuser"
+																				<input type="text" name="apeuser" class="form-control form-control-user" id="apeuser"
 																						placeholder="Apellido Completo">
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="nick"
+																				<input type="text" name="nick" class="form-control form-control-user" id="nick"
 																						placeholder="Usuario">
 																		</div>
 																</div>
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="emailuser"
+																				<input type="text" name="emailuser" class="form-control form-control-user" id="emailuser"
 																						placeholder="Correo Electrónico">
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="pass"
+																				<input type="text" name="pass" class="form-control form-control-user" id="pass"
 																						placeholder="Contraseña">
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploRclave"
+																				<input type="text" name="" class="form-control form-control-user" id="ejemploRclave"
 																						placeholder="Repetir Contraseña">
 																		</div>
 																</div>
