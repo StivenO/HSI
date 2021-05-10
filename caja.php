@@ -412,7 +412,13 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Ingresos</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">400,000</div>
+                                                <?php
+                                                  require 'conexion/conexion.php';
+                                                  $sql = "SELECT SUM(total) AS 'sumventas' FROM sell WHERE opetype_id ='1'";
+                                                  $result = $con->query( $sql );
+                                                  $datos = $result->fetch_assoc()
+                                                  ?>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo " $". number_format($datos['sumventas']) ."  " ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-search-dollar fa-2x text-gray-300"></i>
@@ -430,7 +436,13 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                                                 Egresos</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">100,000</div>
+                                                <?php
+                                                  require 'conexion/conexion.php';
+                                                  $sql = "SELECT SUM(total) AS 'sumcompras' FROM sell WHERE opetype_id ='2'";
+                                                  $result = $con->query( $sql );
+                                                  $datos = $result->fetch_assoc()
+                                                  ?>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo " $". number_format($datos['sumcompras']) ."  " ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-funnel-dollar fa-2x text-gray-300"></i>
@@ -448,7 +460,11 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Total</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">300,000</div>
+                                                <?php
+                                                $suma = 0;
+                                                  $suma = $vventas-$vcompras;
+                                                 ?>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo "".$suma.""?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
