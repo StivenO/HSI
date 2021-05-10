@@ -402,7 +402,7 @@
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Agregar un Usuario</h1>
 
-										<form class="user">
+										<form action="guardar.php" method="post" class="user">
 
 											<!-- Fila de columna -->
 											<div class="col-lg-6 mb-4">
