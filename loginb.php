@@ -13,6 +13,7 @@
     if ( $result->num_rows > 0 ) {
       $_SESSION["autentificado"]= "si";
       $_SESSION["nomuser"] = $data['nomuser'];
+      $_SESSION["apeuser"] = $data['apeuser'];
       $_SESSION["nick"] = $data['nick'];
       $_SESSION["id"] = $data['iduser'];
 
