@@ -415,7 +415,7 @@
                               <div class="card-body">
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                      <input type="text" class="form-control form-control-user" id="ejemploNomuser"
+                                      <input type="text" class="form-control form-control-user" disabled="disabled" id="ejemploNomuser"
                                           placeholder="Nombre del usuario">
                                     </div>
                                     <div class="col-sm-4">
