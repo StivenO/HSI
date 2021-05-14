@@ -430,7 +430,7 @@
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="number" name="numid" class="form-control form-control-user" id="num"
-																						placeholder="Número de identificación">
+																						placeholder="Número de identificación*">
 																		</div>
 																		<div class="col-sm-4 mb-3 mb-sm-0">
 																				<select name="rol_id" class="form-control form-select-user text-gray-600" id="ejemploRol">
