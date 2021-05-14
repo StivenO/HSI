@@ -420,7 +420,7 @@
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
                                         <select name="tipoid" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
-                                          <option value="" disabled selected>Selecione...</option>
+                                          <option value="" disabled selected>Tipo de identificación...</option>
                                             <?php
                                             while ($typeid = $result->fetch_assoc() ) {
                                               echo "<option value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
@@ -430,31 +430,34 @@
                                    </div>
                                    <div class="col-sm-4">
                                        <input name="numid" type="number" class="form-control form-control-user" id="ejemploNumid"
-                                           placeholder="Número de identificación">
+                                           placeholder="Número de identificación*">
                                    </div>
                                    <div class="col-sm-4">
                                        <input name="nomperson" type="text" class="form-control form-control-user" id="ejemploNomperson"
-                                           placeholder="Nombre...">
+                                           placeholder="Nombre completo*">
                                    </div>
                                </div>
                                <div class="form-group row">
                                    <div class="col-sm-4 mb-3 mb-sm-0">
                                        <input name="apeperson" type="text" class="form-control form-control-user" id="ejemploApeperson"
-																						placeholder="Apellido...">
+																						placeholder="Apellido completo*">
 																		</div>
                                     <div class="col-sm-4 mb-3 mb-sm-0">
 																				<input name="address" type="text" class="form-control form-control-user" id="ejemploAddress"
-																						placeholder="Dirección">
+																						placeholder="Dirección*">
 																		</div>
                                     <div class="col-sm-4">
-																				<input name="phone" type="tel" class="form-control form-control-user" id="ejemploPhone"
-																						placeholder="Número de contacto">
+																				<input name="phone" type="number" class="form-control form-control-user" id="ejemploPhone"
+																						placeholder="Número de contacto*">
 																		</div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                      <input type="submit" name="" value="Crear Usuario" class="btn btn-primary btn-user btn-block"></input>
-
+  																			<input name="email" type="text" class="form-control form-control-user" id="ejemploAddress"
+  																						placeholder="Correo electrónico*">
+  																	</div>
+                                    <div class="col-sm-4">
+                                        <input type="submit" name="" value="Crear Usuario" class="btn btn-primary btn-user btn-block"></input>
                                     </div>
 																</div>
 

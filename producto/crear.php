@@ -416,7 +416,7 @@
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
                                       <input type="text" class="form-control form-control-user" id="ejemploNom"
-                                          placeholder="Nombre del producto">
+                                          placeholder="Nombre del producto*">
 																		</div>
 																		<div class="col-sm-8">
 																				<input type="text" class="form-control form-control-user" id="ejemploDescription"
@@ -426,21 +426,21 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4">
                                         <input type="number" class="form-control form-control-user" id="ejemploStockmin"
-                                          placeholder="Stock mínimo">
+                                          placeholder="Stock mínimo*">
                                     </div>
                                     <div class="col-sm-4">
 																				<input type="number" class="form-control form-control-user" id="ejemploPricein"
-																						placeholder="Precio de entrada">
+																						placeholder="Precio de entrada*">
 																		</div>
                                     <div class="col-sm-4">
 																				<input type="number" class="form-control form-control-user" id="ejemploCant"
-																						placeholder="Cantidad">
+																						placeholder="Cantidad*">
 																		</div>
 																</div>
 																<div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
   																				<input type="number" class="form-control form-control-user" id="ejemploPriceout"
-  																						placeholder="Precio de salida">
+  																						placeholder="Precio de salida*">
   																	</div>
                                     <div class="col-sm-4">
                                         <select name="unitid" class="form-control form-select-user text-gray-600" id="ejemploUnitid">

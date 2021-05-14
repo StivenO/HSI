@@ -420,32 +420,32 @@
 																				</select>
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploNumid"
-																						placeholder="Número del NIT">
+																				<input type="number" class="form-control form-control-user" id="ejemploNumid"
+																						placeholder="Número de identificación*">
 																		</div>
                                     <div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploNomperson"
-																						placeholder="Nombre de la Empresa">
+																						placeholder="Nombre de la Empresa*">
 																		</div>
 																</div>
                                 <div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
 																				<input type="text" class="form-control form-control-user" id="ejemploNomperson"
-																						placeholder="Nombre del Remitente">
+																						placeholder="Nombre del Remitente*">
 																		</div>
                                     <div class="col-sm-4">
 																				<input type="number" class="form-control form-control-user" id="ejemploPhone"
-																						placeholder="Número de contacto">
+																						placeholder="Número de contacto*">
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploAddress"
-																						placeholder="Dirección">
+																						placeholder="Dirección*">
 																		</div>
 																</div>
 																<div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
 																				<input type="text" class="form-control form-control-user" id="ejemploEmail"
-																						placeholder="Correo Electrónico">
+																						placeholder="Correo Electrónico*">
 																		</div>
                                     <div class="col-sm-3">
   																			<input type="submit" name="" value="Crear Proveedor" class="btn btn-primary btn-user btn-block"></input>
