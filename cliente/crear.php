@@ -453,8 +453,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                      <input type="submit" name="Prueba Envair" value="">
-  																			<a class="btn btn-primary btn-user btn-block" type="submit" name="" value=""><i class="fas fa-plus"></i> Crear Cliente</a>
+                                      <input type="submit" name="" value="Crear Usuario" class="btn btn-primary btn-user btn-block"></input>
 
                                     </div>
 																</div>
