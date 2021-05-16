@@ -1,21 +1,24 @@
-<?php 
-	
-	require 'conexion.php';
+<?php
 
-	$nom = $_POST['nom'];
-	$tel = $_POST['tel'];
-	$dir = $_POST['dir'];
-	$fec = $_POST['fec'];
-	$ciu = $_POST['ciu'];
+	require '../conexion/conexion.php';
 
-	$sql = "INSERT INTO personas 
-				VALUES(null, '$nom', '$tel', '$dir', '$fec', '$ciu')";
-	
+	$tipoid = $_POST['tipoid'];
+	$numid = $_POST['numid'];
+	$nomperson = $_POST['nomperson'];
+	$apeperson = $_POST['apeperson'];
+	$address = $_POST['address'];
+	$phone = $_POST['phone'];
+	$emailperson = $_POST['emailperson'];
+
+	$sql = "INSERT INTO person
+				VALUES(null, $tipoid, '$numid', '$nomperson', '$apeperson', '$address', '$phone', '2', '$emailperson')";
+
+
 	$result = $con->query( $sql );
 
 	if ($result) {
 		// echo "Registro insertado exitosamente!!!";
-		header('location: index.php');
+		header('location: ../proveedores.php');
 	}else{
 		echo "Error!!!..." . $con->error;
 	}

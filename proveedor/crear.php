@@ -401,8 +401,12 @@
 
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Agregar un Proveedor</h1>
-
-										<form class="user">
+                    <?php
+                    require '../conexion/conexion.php';
+                          $sql = "SELECT * FROM typeid";
+                          $result = $con->query( $sql );
+                      ?>
+										<form action="guardar.php" method="post" class="user">
 
 											<!-- Fila de columna -->
 											<div class="col-lg-6 mb-4">
@@ -415,22 +419,27 @@
 															<div class="card-body">
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<select name="Tipoid" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
-																							<option selected="true" disabled="disabled" value="value1">NIT</option>
+																				<select name="tipoid" class="form-control form-select-user text-gray-600" id="ejemploTipoid">
+                                          <option value="" disabled selected>Tipo de identificación...</option>
+                                          <?php
+                                          while ($typeid = $result->fetch_assoc() ) {
+                                            echo "<option value='".$typeid['idtypeid']."'>".$typeid['nomtypeid']."</option>";
+                                         }
+                                         ?>
 																				</select>
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="number" class="form-control form-control-user" id="ejemploNumid"
+																				<input  name="numid" type="number" class="form-control form-control-user" id="ejemploNumid"
 																						placeholder="Número de identificación*">
 																		</div>
                                     <div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploNomperson"
+																				<input name="nomperson" type="text" class="form-control form-control-user" id="ejemploNomperson"
 																						placeholder="Nombre de la Empresa*">
 																		</div>
 																</div>
                                 <div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="ejemploNomperson"
+																				<input name="apeperson" type="text" class="form-control form-control-user" id="ejemploNomperson"
 																						placeholder="Nombre del Remitente*">
 																		</div>
                                     <div class="col-sm-4">
@@ -438,13 +447,13 @@
 																						placeholder="Número de contacto*">
 																		</div>
 																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploAddress"
+																				<input name="phone" type="text" class="form-control form-control-user" id="ejemploAddress"
 																						placeholder="Dirección*">
 																		</div>
 																</div>
 																<div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-																				<input type="text" class="form-control form-control-user" id="ejemploEmail"
+																				<input name="emailperson" type="email" class="form-control form-control-user" id="ejemploEmail"
 																						placeholder="Correo Electrónico*">
 																		</div>
                                     <div class="col-sm-3">
