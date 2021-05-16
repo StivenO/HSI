@@ -8,9 +8,10 @@
 	$apeperson = $_POST['apeperson'];
 	$address = $_POST['address'];
 	$phone = $_POST['phone'];
+	$emailperson = $_POST['emailperson'];
 
 	$sql = "INSERT INTO person
-				VALUES(null, $tipoid, '$numid', '$nomperson', '$apeperson', '$address', '$phone', '1', null)";
+				VALUES(null, $tipoid, '$numid', '$nomperson', '$apeperson', '$address', '$phone', '1', '$emailperson')";
 
 	$result = $con->query( $sql );
 

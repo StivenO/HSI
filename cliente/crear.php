@@ -453,7 +453,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-  																			<input name="email" type="text" class="form-control form-control-user" id="ejemploAddress"
+  																			<input name="emailperson" type="email" class="form-control form-control-user" id="ejemploAddress"
   																						placeholder="Correo electrónico*">
   																	</div>
                                     <div class="col-sm-4">
