@@ -443,11 +443,11 @@
 																						placeholder="Nombre del Remitente*">
 																		</div>
                                     <div class="col-sm-4">
-																				<input type="number" class="form-control form-control-user" id="ejemploPhone"
+																				<input name="phone" type="number" class="form-control form-control-user" id="ejemploPhone"
 																						placeholder="Número de contacto*">
 																		</div>
 																		<div class="col-sm-4">
-																				<input name="phone" type="text" class="form-control form-control-user" id="ejemploAddress"
+																				<input name="address" type="text" class="form-control form-control-user" id="ejemploAddress"
 																						placeholder="Dirección*">
 																		</div>
 																</div>
