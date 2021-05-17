@@ -415,6 +415,9 @@
                       $sql = "SELECT * FROM rol";
                       $resultt = $con->query( $sql );
 
+                      $sql = "SELECT * FROM state";
+                      $resulttt = $con->query( $sql );
+
                   		if ($_POST) {
                         $typeid = $_POST['typeid_id'];
                         $num = $_POST['numid'];
@@ -508,19 +511,24 @@
 																						placeholder="Contraseña" value="<?= $persona['pass'] ?>">
 																		</div>
                                     <!-- Compararla que sea igual a la primer contraseña -->
-																		<div class="col-sm-4">
-																				<input type="text" class="form-control form-control-user" id="ejemploRclave"
-																						placeholder="Repetir Contraseña" value="">
+                                    <div class="col-sm-4">
+                                      <input name="rClave" type="text" class="form-control form-control-user" id="ejemploRclave"
+                                          placeholder="Repetir Contraseña" value="">
 																		</div>
 																</div>
 																<div class="form-group row">
-                                  <div class="col-sm-4">
-                                      <input type="text" class="form-control form-control-user" id="ejemploEstado"
-                                          placeholder="Estado" value="<?= $persona['state_id'] ?>">
-                                  </div>
-                                  <div class="col-sm-4">
-                                      <input type="text" class="form-control form-control-user" id="ejemploRol"
-                                          placeholder="Rol" value="<?= $persona['rol_id'] ?>">
+                                  <div class="col-sm-4 mb-3 mb-sm-0">
+                                      <select name="rol" class="form-control form-select-user text-gray-600" id="ejemploRol">
+                                            <option selected="true" disabled="disabled" value="value1">Seleccione su estado</option>
+                                            <?php
+                                                while ($state = $resulttt->fetch_assoc() ) {
+                                                  if( $state['idstate'] == $persona['state_id'])
+                                                    echo "<option selected value='".$state['idrol']."'>".$state['nomstate']."</option>";
+                                                  else
+                                                    echo "<option value='".$state['idstate']."'>".$state['nomstate']."</option>";
+                                                }
+                                                ?>
+                                      </select>
                                   </div>
 																	<div class="col-sm-3">
 																			<input type="submit" name="" value="Editar Usuario" class="btn btn-primary btn-user btn-block"></input>
