@@ -447,7 +447,7 @@
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" name="apeuser" class="form-control form-control-user" id="apeuser"
-																						placeholder="Apellido Completo*">
+																						placeholder="Apellido Completo">
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" name="nick" class="form-control form-control-user" id="nick"

@@ -412,26 +412,28 @@
                       $sql = "SELECT * FROM typeid";
                       $result = $con->query( $sql );
 
-                      $sql = "SELECT * FROM typeid";
-                      $result = $con->query( $sql );
+                      $sql = "SELECT * FROM rol";
+                      $resultt = $con->query( $sql );
 
                   		if ($_POST) {
-                        $typeid_id = $_POST['typeid_id'];
-                        $nom = $_POST['numid'];
+                        $typeid = $_POST['typeid_id'];
+                        $num = $_POST['numid'];
                         $nom = $_POST['nomperson'];
                         $ape = $_POST['apeperson'];
-                        $address = $_POST['address'];
-                        $phone = $_POST['phone'];
-
+                        $email = $_POST['emailuser'];
+                        $nick = $_POST['nick'];
+                        $pass = $_POST['pass'];
+                        $state = $_POST['state_id'];
+                        $rol = $_POST['rol_id'];
 
                   			$sql = "UPDATE user
-                  					SET typeid_id = '$typeid_id', nomuser = '$nomuser', apeuser = '$apeuser', numid = '$numid', rol_id = '$rol_id'
+                  					SET typeid_id = '$typeid', numid = '$num', nomuser = '$nom', apeuser = '$ape', emailuser = '$email', nick = '$nick', pass = '$pass', state_id = '$state', rol_id = '$rol'
                   					WHERE iduser = $iduser";
 
                   			$result = $con->query($sql);
 
                   			if ($result)
-                  				header('location: ../clientes.php');
+                  				header('location: ../usuarios.php');
                   			else
                   				echo "Error!!!..." . $con->error;
 
@@ -470,13 +472,13 @@
 																		</div>
 																		<div class="col-sm-4 mb-3 mb-sm-0">
 																				<select name="rol" class="form-control form-select-user text-gray-600" id="ejemploRol">
-																							<option selected="true" disabled="disabled" value="value1">	Administrador </option>
+																							<option selected="true" disabled="disabled" value="value1">Seleccione su rol</option>
                                               <?php
-                                                  while ($rol = $result->fetch_assoc() ) {
+                                                  while ($rol = $resultt->fetch_assoc() ) {
                                                     if( $rol['idrol'] == $persona['rol_id'])
-                                                      echo "<option selected value='".$typeid['idrol']."'>".$typeid['nomrol']."</option>";
+                                                      echo "<option selected value='".$rol['idrol']."'>".$rol['nomrol']."</option>";
                                                     else
-                                                      echo "<option value='".$typeid['idrol']."'>".$typeid['nomrol']."</option>";
+                                                      echo "<option value='".$rol['idrol']."'>".$rol['nomrol']."</option>";
                                                   }
                                                   ?>
 																				</select>
@@ -489,7 +491,7 @@
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploApellido"
-																						placeholder="Apellido Completo" value="<?= $persona['nomuser'] ?>">
+																						placeholder="Apellido Completo" value="<?= $persona['apeuser'] ?>">
 																		</div>
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploUsuario"
@@ -505,16 +507,24 @@
 																				<input type="text" class="form-control form-control-user" id="ejemploClave"
 																						placeholder="Contraseña" value="<?= $persona['pass'] ?>">
 																		</div>
+                                    <!-- Compararla que sea igual a la primer contraseña -->
 																		<div class="col-sm-4">
 																				<input type="text" class="form-control form-control-user" id="ejemploRclave"
-																						placeholder="Repetir Contraseña" value="<?= $persona['pass'] ?>">
+																						placeholder="Repetir Contraseña" value="">
 																		</div>
 																</div>
 																<div class="form-group row">
+                                  <div class="col-sm-4">
+                                      <input type="text" class="form-control form-control-user" id="ejemploEstado"
+                                          placeholder="Estado" value="<?= $persona['state_id'] ?>">
+                                  </div>
+                                  <div class="col-sm-4">
+                                      <input type="text" class="form-control form-control-user" id="ejemploRol"
+                                          placeholder="Rol" value="<?= $persona['rol_id'] ?>">
+                                  </div>
 																	<div class="col-sm-3">
 																			<input type="submit" name="" value="Editar Usuario" class="btn btn-primary btn-user btn-block"></input>
 																	</div>
-
 																</div>
 
 														</form>
