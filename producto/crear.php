@@ -402,7 +402,7 @@
                     <!-- Encabezado de página -->
                     <h1 class="h3 mb-4 text-gray-800">Agregar un Producto</h1>
 
-										<form class="user">
+										<form action="guardar.php" method="post" class="user">
 
 											<!-- Fila de columna -->
 											<div class="col-lg-6 mb-4">
@@ -415,47 +415,58 @@
 															<div class="card-body">
 																<div class="form-group row">
 																		<div class="col-sm-4 mb-3 mb-sm-0">
-                                      <input type="text" class="form-control form-control-user" id="ejemploNom"
+                                      <input name="nomproduct" type="text" class="form-control form-control-user" id="ejemploNom"
                                           placeholder="Nombre del producto*">
 																		</div>
 																		<div class="col-sm-8">
-																				<input type="text" class="form-control form-control-user" id="ejemploDescription"
+																				<input name="description" type="text" class="form-control form-control-user" id="ejemploDescription"
 																						placeholder="Descripción...">
 																		</div>
 																</div>
                                 <div class="form-group row">
                                     <div class="col-sm-4">
-                                        <input type="number" class="form-control form-control-user" id="ejemploStockmin"
+                                        <input name="stockmin" type="number" class="form-control form-control-user" id="ejemploStockmin"
                                           placeholder="Stock mínimo*">
                                     </div>
                                     <div class="col-sm-4">
-																				<input type="number" class="form-control form-control-user" id="ejemploPricein"
+																				<input name="pricein" type="number" class="form-control form-control-user" id="ejemploPricein"
 																						placeholder="Precio de entrada*">
 																		</div>
                                     <div class="col-sm-4">
-																				<input type="number" class="form-control form-control-user" id="ejemploCant"
+																				<input name="quantity" type="number" class="form-control form-control-user" id="ejemploCant"
 																						placeholder="Cantidad*">
 																		</div>
 																</div>
 																<div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-  																				<input type="number" class="form-control form-control-user" id="ejemploPriceout"
+  																				<input name="priceout" type="number" class="form-control form-control-user" id="ejemploPriceout"
   																						placeholder="Precio de salida*">
   																	</div>
+                                    <?php
+                                    require '../conexion/conexion.php';
+                                          $sql = "SELECT * FROM category";
+                                          $resultado = $con->query( $sql );
+                                          $sql = "SELECT * FROM unit";
+                                          $resultados = $con->query( $sql );
+                                      ?>
                                     <div class="col-sm-4">
-                                        <select name="unitid" class="form-control form-select-user text-gray-600" id="ejemploUnitid">
+                                        <select name="unit_id" class="form-control form-select-user text-gray-600" id="ejemploUnitid">
                                               <option selected="true" disabled="disabled" value="value1">Seleccione Unidad de medida...</option>
-                                              <option value="value1">metro(s)</option>
-                                              <option value="value1">galon(es)</option>
-                                              <option value="value1">paquete(s)</option>
+                                              <?php
+                                              while ($unit = $resultados->fetch_assoc() ) {
+                                                echo "<option value='".$unit['idunit']."'>".$unit['nomunit']."</option>";
+                                             }
+                                             ?>
                                             </select>
 																		</div>
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                        <select name="categoryid" class="form-control form-select-user text-gray-600" id="ejemploCategory">
+                                        <select name="category_id" class="form-control form-select-user text-gray-600" id="ejemploCategory">
                                               <option selected="true" disabled="disabled" value="value1">Seleccione la Categoría...</option>
-                                              <option value="value1">Herramientas</option>
-                                              <option value="value1">Materiales</option>
-                                              <option value="value1">Eléctricos</option>
+                                              <?php
+                                              while ($category = $resultado->fetch_assoc() ) {
+                                                echo "<option value='".$category['idcategory']."'>".$category['nomcategory']."</option>";
+                                             }
+                                             ?>
                                             </select>
 																		</div><br><br><br>
                                           <div class="col-sm-4 mb-3 mb-sm-0">

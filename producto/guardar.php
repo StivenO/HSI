@@ -1,21 +1,24 @@
-<?php 
-	
-	require 'conexion.php';
+<?php
 
-	$nom = $_POST['nom'];
-	$tel = $_POST['tel'];
-	$dir = $_POST['dir'];
-	$fec = $_POST['fec'];
-	$ciu = $_POST['ciu'];
+	require '../conexion/conexion.php';
 
-	$sql = "INSERT INTO personas 
-				VALUES(null, '$nom', '$tel', '$dir', '$fec', '$ciu')";
-	
+	$nomproduct = $_POST['nomproduct'];
+	$description = $_POST['description'];
+	$stockmin = $_POST['stockmin'];
+	$pricein = $_POST['pricein'];
+	$quantity = $_POST['quantity'];
+	$priceout = $_POST['priceout'];
+	$unit_id = $_POST['unit_id'];
+	$category_id = $_POST['category_id'];
+
+	$sql = "INSERT INTO product
+				VALUES(null, '$nomproduct', '$description', '$stockmin', '$pricein', '$quantity', '$priceout', '$unit_id', '$category_id')";
+
 	$result = $con->query( $sql );
 
 	if ($result) {
 		// echo "Registro insertado exitosamente!!!";
-		header('location: index.php');
+		header('location: ../productos.php');
 	}else{
 		echo "Error!!!..." . $con->error;
 	}
