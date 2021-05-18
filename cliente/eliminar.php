@@ -6,7 +6,7 @@
 
 // Eliminar datos
 
-  $sql = "DELETE FROM person WHERE idperson = '$idperson'";
+  $sql = "DELETE FROM person WHERE idperson = $idperson";
 
   $result = $con->query( $sql ); //envia a conexion
 

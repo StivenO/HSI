@@ -520,7 +520,7 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Espacio de alertas</h6>
                                 </div>
                                 <div class="card-body text-gray-600">
-                                    <p>De momento <b>no hay alertas</b>, todo está en orden.</p>
+                                  <p>NO ME DIO</p>
                                 </div>
                             </div>
 
