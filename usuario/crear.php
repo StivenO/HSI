@@ -432,11 +432,19 @@
 																				<input type="number" name="numid" class="form-control form-control-user" id="num"
 																						placeholder="Número de identificación*">
 																		</div>
+                                    <?php
+                                    require '../conexion/conexion.php';
+                                          $sql = "SELECT * FROM rol";
+                                          $resulta = $con->query( $sql );
+                                      ?>
 																		<div class="col-sm-4 mb-3 mb-sm-0">
 																				<select name="rol_id" class="form-control form-select-user text-gray-600" id="ejemploRol">
 																							<option selected="true" disabled="disabled" value="value1">Cargo o rol</option>
-																							<option value="value2">Administrador</option>
-																							<option value="value3">Usuario</option>
+                                              <?php
+                                              while ($rol = $resulta->fetch_assoc() ) {
+                                                echo "<option value='".$rol['idrol']."'>".$rol['nomrol']."</option>";
+                                             }
+                                             ?>
 																				</select>
 																		</div>
 																</div>
