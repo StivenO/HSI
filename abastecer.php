@@ -414,13 +414,13 @@
                             <tr class='text-center'>
                               <th>Nombre</th>
                               <th>Descripción</th>
-                              <th>Precio compra</th>
-                              <th>Precio venta</th>
+                              <th style='width:90px' >Precio compra</th>
+                              <th style='width:90px' >Precio venta</th>
                               <th>Stock mínimo</th>
                               <th>Cantidad</th>
                               <th>Tipo de unidad</th>
                               <th>Categoría</th>
-                              <th style='width:100px' >Nueva</th>
+                              <th style='width:110px' >Nueva</th>
                               <th style='width:120px' >Acción</th>
                             </tr>
                           </thead>
