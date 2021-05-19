@@ -526,9 +526,9 @@
                                   $datos = $result->fetch_assoc();
                                   $tipnum = $datos['nummin'];
                                   if ($tipnum > '0') {
-                                    ?><p><a href="abastecer.php"> Hay productos por debajo del Stock mínimo </a></p>
+                                    ?><p><hr /><a href="abastecer.php"> Hay productos por debajo del Stock mínimo </a><hr /></p>
                                   <script>
-                                      Push.create(" ¡ <?PHP echo $_SESSION["nomuser"];?>, Tienes que abastecer!",{
+                                      Push.create("¡ <?PHP echo $_SESSION["nomuser"];?>, Tienes que abastecer!",{
                                         body: " Da clic aquí para ver los productos que debes abastecer ",
                                         icon: "img/logomin.png",
                                         timeout: 7000,
