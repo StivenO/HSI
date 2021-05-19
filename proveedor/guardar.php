@@ -11,7 +11,7 @@
 	$emailperson = $_POST['emailperson'];
 
 	$sql = "INSERT INTO person
-				VALUES(null, $tipoid, '$numid', '$nomperson', '$apeperson', '$address', '$phone', '2', '$emailperson')";
+				VALUES(null, $tipoid, '$numid', '$nomperson', '$apeperson', '$address', '$phone', '2', '$emailperson', '0')";
 
 
 	$result = $con->query( $sql );
