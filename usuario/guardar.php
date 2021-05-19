@@ -18,7 +18,7 @@
 
 	if ($result) {
 		// echo "Registro insertado exitosamente!!!";
-		header('location: ../clientes.php');
+		header('location: ../usuarios.php');
 	}else{
 		echo "Error!!!..." . $con->error;
 	}
