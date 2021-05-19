@@ -11,7 +11,7 @@
     <meta name="author" content="Hardware Store Inventory">
 
     <title>HSI - Aplicación</title>
-
+    <script src="plugins/notificaciones/push.min.js"></script>
     <!-- Fuentes personalizadas para esta plantilla-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -596,7 +596,17 @@
     </div>
 
 
-
+    <!-- Notificaciones de ingreso-->
+    <script>
+      Push.create(" ¡Hola <?PHP echo $_SESSION["nomuser"];?>!",{
+        body: "Gracias por hacer parte de la familia HSI",
+        icon: "img/logomin.png",
+        timeout: 7000,
+        onClick: function (){
+          this.close();
+        }
+      });
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
