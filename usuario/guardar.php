@@ -12,7 +12,7 @@
 
 
 	$sql = "INSERT INTO user
-				VALUES(null, '$numid', '$nomuser', '$apeuser', '$emailuser', '$nick', '$pass', '1', '1', null)";
+				VALUES(null, '$tipoid','$numid', '$nomuser', '$apeuser', '$emailuser', '$nick', '$pass', '1', '1', null)";
 
 	$result = $con->query( $sql );
 
