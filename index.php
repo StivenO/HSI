@@ -520,7 +520,28 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Espacio de alertas</h6>
                                 </div>
                                 <div class="card-body text-gray-600">
-                                  <p>NO ME DIO</p>
+                                  <?php
+                                  $sql = "SELECT COUNT(*) AS 'nummin' FROM product pd INNER JOIN unit ut ON pd.unit_id = ut.idunit INNER JOIN category ct ON pd.category_id = ct.idcategory WHERE quantity < stockmin";
+                                  $result = $con->query($sql);
+                                  $datos = $result->fetch_assoc();
+                                  $tipnum = $datos['nummin'];
+                                  if ($tipnum > '0') {
+                                    ?><p><a href="abastecer.php"> Hay productos por debajo del Stock mínimo </a></p>
+                                  <script>
+                                      Push.create(" ¡ <?PHP echo $_SESSION["nomuser"];?>, Tienes que abastecer!",{
+                                        body: " Da clic aquí para ver los productos que debes abastecer ",
+                                        icon: "img/logomin.png",
+                                        timeout: 7000,
+                                        onClick: function (){
+                                          window.location="abastecer.php";
+                                          this.close();
+                                        }
+                                      });
+                                    </script>
+                                  <?php }else {
+                                    echo "<p> No hay alertas </p>";
+                                  }
+                                   ?>
                                 </div>
                             </div>
 
